@@ -36,6 +36,20 @@ section.app-section-container {
     }
 }
 
+.team {
+    .team-player {
+        fa-icon.stacked{
+            position: absolute;
+            top: 2rem;
+            font-size: 7rem;
+            color: #fff;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}
+
 .drop-shadow-sm {
     text-shadow: 3px 3px 4px #212121
 }
