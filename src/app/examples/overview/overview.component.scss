@@ -1,0 +1,45 @@
+// Overview Styles
+ngb-progressbar {
+    margin-top: 5rem;
+}
+
+section.app-section-container {
+    &.app-section-one {
+        article.app-article-item:nth-child(1) {
+            // @include flex(1 0 60%);
+            
+            // align-items: flex-start;
+            // align-content: flex-start;
+            // border-right: 1px solid rgba(0, 0, 0, 0.3);
+            border-right: 1px solid #E3E3E3;
+            // padding: 1em 1.5em;
+            
+            > div.app-div-item:nth-child(1) {
+                text-align: end;
+            }
+        }
+        
+        article.app-article-item:nth-child(2) {
+            // @include flex(1 0 40%);
+            
+            // align-items: flex-start;
+            // align-content: flex-start;
+            // line-height: 1.7rem;
+            // padding: 1em 1.5em;
+    
+            > div.app-div-item {
+                display: block;
+                padding-top: 5px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.drop-shadow-sm {
+    text-shadow: 3px 3px 4px #212121
+}
+
+.drop-shadow-lg {
+    text-shadow: 6px 6px 7px #212121
+}

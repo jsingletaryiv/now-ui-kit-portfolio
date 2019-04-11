@@ -1,0 +1,138 @@
+.index-page .page-header .logo-main {
+  font-size: 5rem;
+}
+
+.index-page .page-header .container > .content-center {
+  top: 70%;
+  left: 15%;
+}
+
+.app-navbar-logo {
+  display: none;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.app-navbar-fade-in {
+  display: block;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.app-icon-blink {
+  position: relative;
+}
+
+.app-icon-blink fa-icon {
+  position: relative;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.h1-seo {
+  font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.category {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #9A9A9A;
+}
+
+.card-title {
+  margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.col-xs-5ths, .col-sm-5ths {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-md-5ths, .col-lg-5ths {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+/*# sourceMappingURL=overrides.css.map */
