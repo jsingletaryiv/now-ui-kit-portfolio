@@ -1,3 +1,5 @@
+/*     brand Colors              */
+/*      light colors         */
 .index-page .page-header .logo-main {
   font-size: 5rem;
 }
@@ -5,6 +7,47 @@
 .index-page .page-header .container > .content-center {
   top: 70%;
   left: 15%;
+}
+
+section .team .team-player fa-icon {
+  color: #fff;
+}
+
+section .team .team-player fa-icon.stacked {
+  position: absolute;
+  top: 2rem;
+  font-size: 7rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+section .team .team-player div.bg-d4 {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #da1a90;
+}
+
+section .team .team-player .bg-d10 {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 20px solid #da1a90;
+  position: relative;
+  top: -50px;
+}
+
+section .team .team-player .bg-d10:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid #da1a90;
 }
 
 .app-navbar-logo {
@@ -31,6 +74,45 @@
   animation-name: blink;
   -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.app-icon-blink.app-iconmotion fa-icon:nth-child(1) {
+  position: relative;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.app-icon-blink.app-iconmotion fa-icon:nth-child(2) {
+  position: relative;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.app-icon-blink.app-iconmotion fa-icon:nth-child(3) {
+  position: relative;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   opacity: 1;

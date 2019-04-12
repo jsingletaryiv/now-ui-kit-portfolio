@@ -30,11 +30,19 @@
                          [fixedWidth]="true">
                 </fa-icon>
                 <!-- <fa-icon class="logo-main drop-shadow-sm text-primary" [icon]="['fas', 'user-astronaut']" transform="grow-2"></fa-icon> -->
-                <h1 class="font-weight-semi h1-seo drop-shadow-sm">Full-Stack / UI DEVELOPER</h1>
+                <h1 class="font-weight-semi h1-seo drop-shadow-sm">{{ landingPageTitle | uppercase }}</h1>
                 <!-- <div class="divider"></div> -->
-                <h3 class="font-weight-light drop-shadow-sm">Forging Concept into Creation...</h3>
-                <div class="app-icon-blink">
-                    <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
+                <h3 class="font-weight-light drop-shadow-sm">{{ landingPageSubTitle | uppercase }}</h3>
+                <div class="row app-icon-group">
+                    <div class="col-md-12 app-icon-blink app-icon-motion">
+                        <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
+                    </div>
+                    <!-- <div class="col-md-12 app-icon-blink app-icon-motion">
+                        <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
+                    </div>
+                    <div class="col-md-12 app-icon-blink app-icon-motion">
+                        <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
+                    </div> -->
                 </div>
             </div>
             <!-- <h6 class="category category-absolute">Designed by
@@ -101,7 +109,6 @@
 
             <!-- Definition of "Full-Stack" Section -->
             <section class="app-section-config app-section-container">
-                <!-- <h3 class="title">What Does "Full-Stack" Mean?</h3> -->
                 <article class="app-article-item">
                     <div class="typography">
                         <div class="row">
@@ -150,11 +157,11 @@
                             <div class="col-md-3">
                                 <div class="team-player">
 
-                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="50" fill="primary"/>
-                                    </svg>
+                                    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40"/>
+                                    </svg> -->
+                                    <div class="bg-d4"></div>
                                     <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']"></fa-icon>
-
 
                                     <!-- <a href="#" class="btn btn-accent btn-icon btn-round"><i class="fab fa-twitter"></i></a> -->
                                     <!-- <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid"> -->

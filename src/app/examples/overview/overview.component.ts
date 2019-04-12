@@ -35,11 +35,12 @@ export class OverviewComponent implements OnInit, OnDestroy {
     // Overview Images
     // imagesPath = this.serverUrl + this.parallaxPath + '/overview/';
 
-    // Page Header
-    pageTitle = 'Welcome';
-    pageSubTitle = 'Application / UI Developer';
+    // Landing Page
+    landingPageTitle = 'James Singletary IV';
+    landingPageSubTitle = 'Full-Stack Application / UI Developer';
     // pageSubTitle = 'Since MCMXCVIII';
 
+    // TODO: Add section titles as needed //
     // Section 1
     section1Title = 'Forging Concepts into Creation //';
     section1Text = '';

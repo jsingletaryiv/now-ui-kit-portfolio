@@ -1,11 +1,10 @@
-// Disable / Enable ng-bootstrap Features
-// TODO:: Look into these features
-// $enable-gradients: true !default;
-// $enable-shadows: true !default;
+// Import Variables for Overrides
+@import "now-ui-kit/variables";
 
-// Style Overrides <Global>
-// $sans-serif-family:          'Lato', 'Helvetica Neue',  Arial, sans-serif;
+// Disable / Enable Bootstrap Options
+// NOTE: Options are located in Bootstrap `_variables`partial
 
+// Style Overrides
 .index-page {
     .page-header {
         .logo-main {
@@ -17,6 +16,51 @@
                 top: 70%;
                 left: 15%;
             }
+        }
+    }
+}
+
+section .team {
+    .team-player {
+        fa-icon {
+            color: #fff;
+        }
+
+        fa-icon.stacked{
+            position: absolute;
+            top: 2rem;
+            font-size: 7rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        div.bg-d4 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid $accent-color;
+        }
+
+        .bg-d10 {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 20px solid $accent-color;
+            position: relative;
+            top: -50px;
+          }
+
+          .bg-d10:after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top: 70px solid $accent-color;
         }
     }
 }
@@ -49,6 +93,46 @@
         -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
         opacity: 1;
+    }
+
+    &.app-iconmotion {
+        fa-icon:nth-child(1) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 0;
+            animation-delay: 0;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+        fa-icon:nth-child(2) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+        fa-icon:nth-child(3) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+
     }
 }
 
