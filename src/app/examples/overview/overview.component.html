@@ -67,7 +67,7 @@
                         <!-- <div class="divider"></div> -->
                         <div class="app-div-item">
                             <!-- NOTE: Update Bootstrap to v4.3 to leverage Responsive Font Sizes. -->
-                            <h3 class="">
+                            <h3>
                                 My name is James, a <q>Full-Stack</q> Developer with a focus on Cloud-Based Software &amp; Web Applications 
                                 capable of serving up Big Data in Real-Time via custom built APIs and Microservices. Thank you
                                 for visiting my tiny sliver of cyber-space.
@@ -78,7 +78,7 @@
                     </article> 
                     
                     <article class="app-article-item col-md-4">
-                        <div class="app-div-item text-primary flow-text">
+                        <div class="app-div-item app-fw-500 text-primary flow-text">
                             <p>
                                 I have always possesed a strong passion for creating innovative, yet intuitive real-world solutions that
                                 provide a positive impact to it's users &amp; visitors alike.
@@ -156,30 +156,30 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="team-player">
-
+                                    <!-- FIXME: Leverage SVG over CSS for all shapes -->
                                     <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="50" cy="50" r="40"/>
                                     </svg> -->
-                                    <div class="bg-d4"></div>
-                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']"></fa-icon>
+                                    <div class="bg-d4 mx-auto"></div>
+                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']" transform="up-30"></fa-icon>
 
-                                    <!-- <a href="#" class="btn btn-accent btn-icon btn-round"><i class="fab fa-twitter"></i></a> -->
-                                    <!-- <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid"> -->
-
-                                    <h4 class="title">Speed</h4>
-                                    <p class="category text-primary">Performance</p>
+                                    <h4 class="title">Performance</h4>
+                                    <p class="category text-primary">Payload Speeds</p>
                                     <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
+                                        <a href="#">links</a> for people to be able to follow them outside the site.
+                                    </p>
+                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-twitter"></i></a>
+                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-instagram"></i></a>
+                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="team-player">
-                                    <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid">
+                                    <div class="bg-d4-inverted mx-auto"></div>
+                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'desktop']" transform="up-45"></fa-icon>
+
                                     <h4 class="title">Progressive</h4>
-                                    <p class="category text-primary">Responsive</p>
+                                    <p class="category text-primary">Responsive Designs</p>
                                     <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
@@ -188,9 +188,11 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="team-player">
-                                    <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid">
+                                    <div class="bg-d4 mx-auto"></div>
+                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'brain']" transform="up-30"></fa-icon>
+
                                     <h4 class="title">Intuitive</h4>
-                                    <p class="category text-primary">Scalable</p>
+                                    <p class="category text-primary">Modular &amp; Scalable</p>
                                     <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
@@ -200,9 +202,11 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="team-player">
-                                    <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid">
+                                    <div class="bg-d4-inverted mx-auto"></div>
+                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'cogs']" transform="up-45"></fa-icon>
+                                    
                                     <h4 class="title">Dynamic</h4>
-                                    <p class="category text-primary">Interactive</p>
+                                    <p class="category text-primary">Interactive UI/UX</p>
                                     <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
@@ -232,10 +236,12 @@
                                     <div class="col-md-10">
                                         <blockquote class="m-0">
                                             <p>
-                                                <q>To establish myself as a valuable asset by writing clean, efficient, yet reusable code to create applications that have a positive impact on its
+                                                <fa-icon [icon]="['fas', 'quote-left']" transform="up-5"></fa-icon>
+                                                To establish myself as a valuable asset by writing clean, efficient, yet reusable code to create applications that have a positive impact on its
                                                 users while increasing / streamlining productivity within any given industry. Always holding myself and my skill set to a higher standard. Building
                                                 out intuitive interfaces by means of the latest industry methods &amp; standards. Never being afraid to acknowledge and learn new up-and-coming
-                                                technologies / methodologies that can be applied when creating innovative real world solutions.</q>
+                                                technologies / methodologies that can be applied when creating innovative real world solutions.
+                                                <fa-icon [icon]="['fas', 'quote-right']" transform="up-5"></fa-icon>
                                             </p>
                                             
                                             <footer class="blockquote-footer">James Singletary</footer>
@@ -313,24 +319,24 @@
     <footer class="footer" data-background-color="black">
         <div class="container">
             <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            App Specs
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/about-us">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="http://blog.jamessingletaryiv.com" aria-disabled="true">
                             Blog
                         </a>
                     </li>
-                    <li>
-                        <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/jsingletaryiv/now-ui-kit-portfolio/blob/master/LICENSE.md">
                             MIT License
                         </a>
                     </li>
@@ -338,9 +344,9 @@
             </nav>
             <div class="copyright">
                 &copy;
-                {{data | date: 'yyyy'}}, Designed by
+                {{data | date: 'yyyy'}}, Designed with
                 <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                <a href="https://github.com/jsingletaryiv" target="_blank">James Singletary</a>.
             </div>
         </div>
     </footer>

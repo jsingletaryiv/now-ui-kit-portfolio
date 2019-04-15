@@ -15,8 +15,7 @@ section .team .team-player fa-icon {
 
 section .team .team-player fa-icon.stacked {
   position: absolute;
-  top: 2rem;
-  font-size: 7rem;
+  font-size: 4rem;
   left: 0;
   right: 0;
   z-index: 1;
@@ -25,12 +24,46 @@ section .team .team-player fa-icon.stacked {
 section .team .team-player div.bg-d4 {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid #da1a90;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #17a2b8;
 }
 
-section .team .team-player .bg-d10 {
+section .team .team-player div.bg-d4-inverted {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 200px solid #da1a90;
+}
+
+section .team .team-player div.bg-d6 {
+  width: 100px;
+  height: 100px;
+  background: #da1a90;
+}
+
+section .team .team-player div.bg-d8 {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid #da1a90;
+  position: relative;
+  top: -50px;
+}
+
+section .team .team-player div.bg-d8 .bg-d8:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid #da1a90;
+}
+
+section .team .team-player div.bg-d10 {
   width: 0;
   height: 0;
   border: 50px solid transparent;
@@ -39,7 +72,7 @@ section .team .team-player .bg-d10 {
   top: -50px;
 }
 
-section .team .team-player .bg-d10:after {
+section .team .team-player div.bg-d10 .bg-d10:after {
   content: '';
   position: absolute;
   left: -50px;
@@ -48,6 +81,57 @@ section .team .team-player .bg-d10:after {
   height: 0;
   border: 50px solid transparent;
   border-top: 70px solid #da1a90;
+}
+
+section .team .team-player div.bg-d20 {
+  width: 100px;
+  height: 55px;
+  background: #da1a90;
+  position: relative;
+}
+
+section .team .team-player div.bg-d20 .bg-d20:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid #da1a90;
+}
+
+section .team .team-player div.bg-d20 .bg-d20:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid #da1a90;
+}
+
+.h1-seo {
+  font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.category {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #9A9A9A;
+}
+
+.card-title {
+  margin-bottom: 1.5rem;
+}
+
+.app-fw-500 p, .app-fw-500 span {
+  font-weight: 500;
 }
 
 .app-navbar-logo {
@@ -116,22 +200,6 @@ section .team .team-player .bg-d10:after {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   opacity: 1;
-}
-
-.h1-seo {
-  font-size: 2.8em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.category {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #9A9A9A;
-}
-
-.card-title {
-  margin-bottom: 1.5rem;
 }
 
 @-webkit-keyframes fadeIn {
