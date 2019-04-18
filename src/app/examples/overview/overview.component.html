@@ -34,6 +34,7 @@
                 <!-- <div class="divider"></div> -->
                 <h3 class="font-weight-light drop-shadow-sm">{{ landingPageSubTitle | uppercase }}</h3>
                 <div class="row app-icon-group">
+                    <!-- TODO: Finish the group arrow animation -->
                     <div class="col-md-12 app-icon-blink app-icon-motion">
                         <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
                     </div>
@@ -62,15 +63,20 @@
             <!-- Intro Section -->
             <section class="app-section-config app-section-container app-section-one">
                 <div class="row">
+                    <div class="col-md-8 text-right text-uppercase">
+                        <h3 class="display-4">Hello World!</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <div class="row">
                     <article class="app-article-item col-md-8">
                         <!-- <h1 class="mat-headline">{{ section1Title | uppercase }}</h1> -->
                         <!-- <div class="divider"></div> -->
+
                         <div class="app-div-item">
                             <!-- NOTE: Update Bootstrap to v4.3 to leverage Responsive Font Sizes. -->
                             <h3>
-                                My name is James, a <q>Full-Stack</q> Developer with a focus on Cloud-Based Software &amp; Web Applications 
-                                capable of serving up Big Data in Real-Time via custom built APIs and Microservices. Thank you
-                                for visiting my tiny sliver of cyber-space.
+                                Hi, I'm James and welcome to my tiny sliver of cyber-space. I'm a <q>Full-Stack</q> Developer located in Tampa, Florida. Creator of Cloud-Based Software &amp; Web Applications serving up Big Data in real-time by way of custom built APIs &amp; Microservices.
                             </h3>
                     
                         </div>
@@ -112,12 +118,12 @@
                 <article class="app-article-item">
                     <div class="typography">
                         <div class="row">
-                            <div class="col-md-12 text-center text-uppercase">
+                            <div class="col-md-12 text-left text-uppercase">
                                 <h3>What is "Full-Stack" Development?</h3>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="card mb-3">
+                            <div class="card card-border mb-3">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/assets/img/full-stack-dev.jpg" class="card-img" alt="Full-Stack Developer">
@@ -128,17 +134,24 @@
                                             <!-- <div class="separator-grey separator-thin"></div> -->
                                             <p class="card-text">
                                                 A full-stack developer is a person who is comfortable working in the <strong class="text-accent">front-end</strong> and <strong class="text-accent">back-end</strong> side of
-                                                web development. It does not mean you have <i>mastered everything</i> within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; it 
+                                                web development. This doesn't mean you have mastered <i>everything</i> within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; it 
                                                 means that you can work on both the front-end and back-end, with minimal assistance. It’s no wonder that employers look for full-stack developers.
                                             </p>
                                             <p class="card-text text-right"><small class="text-muted">September 2018 - <cite title="Coding Dojo"> codingdojo.com</cite></small></p>
                                         </div>
+
                                     </div>
+
                                 </div>
+                                
                             </div>
+
                         </div>
+
                     </div>
+
                 </article>
+
             </section>
 
             <div class="separator-grey separator-thin"></div>
@@ -154,65 +167,129 @@
                     <!-- <h2 class="title">Technical Skills / Proficiency</h2> -->
                     <div class="team">
                         <div class="row">
-                            <div class="col-md-3">
-                                <div class="team-player">
-                                    <!-- FIXME: Leverage SVG over CSS for all shapes -->
-                                    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="40"/>
-                                    </svg> -->
-                                    <div class="bg-d4 mx-auto"></div>
-                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']" transform="up-30"></fa-icon>
+                            <!-- NOTE: Overview #1 -->
+                            <div class="col-md-3 team-player">
+                                <div class="card card-info">
+                                    <div class="card-header">
+                                        <!-- FIXME: Leverage SVG over CSS for all shapes -->
+                                        <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="50" r="40"/>
+                                        </svg> -->
+                                        <div class="bg-d4 mx-auto"></div>
+                                        <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']" transform="up-30"></fa-icon>
+                                        <h4 class="title card-title">Performance</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="category text-primary">Payload Speeds</p>
+                                        <p class="card-text description">
+                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
+                                        </a>
+                                    </div>
 
-                                    <h4 class="title">Performance</h4>
-                                    <p class="category text-primary">Payload Speeds</p>
-                                    <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.
-                                    </p>
-                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-                                    <a href="#pablo" class="btn btn-info btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="team-player">
-                                    <div class="bg-d4-inverted mx-auto"></div>
-                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'desktop']" transform="up-45"></fa-icon>
 
-                                    <h4 class="title">Progressive</h4>
-                                    <p class="category text-primary">Responsive Designs</p>
-                                    <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
-                                </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="team-player">
-                                    <div class="bg-d4 mx-auto"></div>
-                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'brain']" transform="up-30"></fa-icon>
+                            <!-- NOTE: Overview #2 -->
+                            <div class="col-md-3 team-player">
+                                <div class="card card-info">
+                                    <div class="card-header">                                                                                    
+                                        <div class="bg-d4-inverted mx-auto"></div>
+                                        <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'desktop']" transform="up-45"></fa-icon>
+                                        <h4 class="title card-title">Progressive</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="category text-primary">Responsive Designs</p>
+                                        <p class="card-text description">
+                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        <a href="#pablo" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
+                                        </a>
+                                    </div>
 
-                                    <h4 class="title">Intuitive</h4>
-                                    <p class="category text-primary">Modular &amp; Scalable</p>
-                                    <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                                 </div>
+
                             </div>
-                            <div class="col-md-3">
-                                <div class="team-player">
-                                    <div class="bg-d4-inverted mx-auto"></div>
-                                    <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'cogs']" transform="up-45"></fa-icon>
-                                    
-                                    <h4 class="title">Dynamic</h4>
-                                    <p class="category text-primary">Interactive UI/UX</p>
-                                    <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
-                                        <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
+                            <!-- NOTE: Overview #3 -->
+                            <div class="col-md-3 team-player">                                
+                                <div class="card card-info">
+                                    <div class="card-header">                                                                                    
+                                        <div class="bg-d4 mx-auto"></div>
+                                        <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'brain']" transform="up-30"></fa-icon>
+                                        <h4 class="title card-title">Intuitive</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="category text-primary">Modular &amp; Scalable</p>
+                                        <p class="card-text description">
+                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-primary btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
+                                        </a>
+                                    </div>
+
                                 </div>
+
+                            </div>
+                            <!-- NOTE: Overview #4 -->
+                            <div class="col-md-3 team-player">
+                                <div class="card card-info">
+                                    <div class="card-header">                                                                          
+                                        <div class="bg-d4-inverted mx-auto"></div>
+                                        <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'cogs']" transform="up-45"></fa-icon>
+                                        <h4 class="title card-title">Dynamic</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="category text-primary">Interactive UI/UX</p>
+                                        <p class="card-text description">
+                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        <a href="#" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                                        </a>
+                                        <a href="#" class="btn btn-accent btn-icon btn-round">
+                                            <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
+                                        </a>
+                                    </div>
+
+                                </div>
+
                             </div>
 
                         </div>
@@ -229,7 +306,7 @@
             <section class="app-section-config app-section-container app-section-two">
                 <div class="row">
                     <article class="app-article-item">
-                        <div class="card">
+                        <div class="card card-info">
                             <div class="card-header font-weight-bold">{{ missionTitle | uppercase }}</div>
                             <div class="card-body">
                                 <div class="row m-1">
@@ -322,7 +399,7 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            App Specs
+                            Analysis
                         </a>
                     </li>
                     <li class="nav-item">
