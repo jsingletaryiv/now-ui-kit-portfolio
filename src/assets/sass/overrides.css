@@ -148,6 +148,10 @@ section .team .team-player div.bg-d20 .bg-d20:after {
   animation-name: fadeIn;
 }
 
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.75em;
+}
+
 .app-icon-blink {
   position: relative;
 }
