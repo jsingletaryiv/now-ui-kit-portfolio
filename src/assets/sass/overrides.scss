@@ -1,11 +1,10 @@
-// Disable / Enable ng-bootstrap Features
-// TODO:: Look into these features
-// $enable-gradients: true !default;
-// $enable-shadows: true !default;
+// Import Variables for Overrides
+@import "now-ui-kit/variables";
 
-// Style Overrides <Global>
-// $sans-serif-family:          'Lato', 'Helvetica Neue',  Arial, sans-serif;
+// Disable / Enable Bootstrap Options
+// NOTE: Options are located in Bootstrap `_variables`partial
 
+// Layout Overrides
 .index-page {
     .page-header {
         .logo-main {
@@ -21,37 +20,116 @@
     }
 }
 
-// Fading In / Out Navbar Logo
-.app-navbar-logo {
-    display: none;
-    -webkit-animation-duration: 1000ms;
-    animation-duration: 1000ms;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
+section .team {
+    .team-player {
+        fa-icon {
+            color: #fff;
 
-.app-navbar-fade-in {
-    display: block;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
+            &.stacked{
+                position: absolute;
+                font-size: 4rem;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+        }
 
-// Blinking Terminal Cursor
-.app-icon-blink {
-    position: relative;
-    
-    fa-icon {
-        position: relative;
-        -webkit-animation-name: blink;
-        animation-name: blink;
-        -webkit-animation-duration: 1000ms;
-        animation-duration: 1000ms;
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        opacity: 1;
+
+        div.bg-d4 {
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 200px solid $primary-color;
+        }
+        
+        div.bg-d4-inverted {
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 200px solid $accent-color;
+        }
+        
+        div.bg-d6 {
+            width: 100px;
+            height: 100px;
+            background: $accent-color;
+        }
+
+        div.bg-d8 {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 70px solid $accent-color;
+            position: relative;
+            top: -50px;
+
+            .bg-d8:after {
+                content: '';
+                position: absolute;
+                left: -50px;
+                top: 70px;
+                width: 0;
+                height: 0;
+                border: 50px solid transparent;
+                border-top: 70px solid $accent-color;
+            }
+        }
+
+        div.bg-d10 {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 20px solid $accent-color;
+            position: relative;
+            top: -50px;
+
+            .bg-d10:after {
+                content: '';
+                position: absolute;
+                left: -50px;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border: 50px solid transparent;
+                border-top: 70px solid $accent-color;
+            }
+        }
+
+        div.bg-d20 {
+            width: 100px;
+            height: 55px;
+            background: $accent-color;
+            position: relative;
+
+            .bg-d20:before {
+                content: "";
+                position: absolute;
+                top: -25px;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 25px solid $accent-color;
+            }
+            .bg-d20:after {
+                content: "";
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 25px solid $accent-color;
+            }
+        }
     }
 }
 
+// Typography Classes / Overrides
 .h1-seo {
     font-size: 2.8em;
     text-transform: uppercase;
@@ -68,7 +146,89 @@
     margin-bottom: 1.5rem;
 }
 
+.app-fw-500 p, .app-fw-500 span  {
+    font-weight: 500;
+}
+
+// Navbar Overrides
+// Fading In / Out Navbar Logo
+.app-navbar-logo {
+    display: none;
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.app-navbar-fade-in {
+    display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+// Icons & Buttons
+.svg-inline--fa.fa-lg {
+    vertical-align: -0.75em;
+}
+
+// Blinking Icon
+.app-icon-blink {
+    position: relative;
+    
+    fa-icon {
+        position: relative;
+        -webkit-animation-name: blink;
+        animation-name: blink;
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        opacity: 1;
+    }
+
+    &.app-iconmotion {
+        fa-icon:nth-child(1) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 0;
+            animation-delay: 0;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+        fa-icon:nth-child(2) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+        fa-icon:nth-child(3) {
+            position: relative;
+            -webkit-animation-name: blink;
+            animation-name: blink;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            opacity: 1;          
+        }
+
+    }
+}
+
 // TODO: Make these extensible by creating _partial files for each animation // 
+// Animations
 // Fade-In
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
@@ -85,6 +245,7 @@
     100% { opacity: 1; }
 }
 
+// Fade-Out
 @-webkit-keyframes fadeOut {
     100% { opacity: 1; }
     0% { opacity: 0; }
@@ -110,6 +271,7 @@
     to { opacity: 0; }
 }
 
+// Blinking 
 @keyframes blink {
     from { opacity: 1; }
     to { opacity: 0; }
@@ -123,7 +285,7 @@
     }
 }
 
-// Extend Bootstrap 
+// Bootstrap Extended
 .col-xs-5ths, .col-sm-5ths {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;

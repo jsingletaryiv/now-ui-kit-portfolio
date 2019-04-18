@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 
  =========================================================
@@ -1620,6 +1621,68 @@ fieldset[disabled] .btn-primary.active {
 .show > .btn-primary.btn-link.dropdown-toggle:hover {
   background-color: transparent;
   color: #1abad3;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-accent {
+  background-color: #da1a90;
+  color: #FFFFFF;
+}
+
+.btn-accent:hover, .btn-accent:focus, .btn-accent:not(:disabled):not(.disabled):active, .btn-accent:not(:disabled):not(.disabled).active, .btn-accent:not(:disabled):not(.disabled):active:focus, .btn-accent:not(:disabled):not(.disabled).active:focus, .btn-accent:active:hover, .btn-accent.active:hover,
+.show > .btn-accent.dropdown-toggle,
+.show > .btn-accent.dropdown-toggle:focus,
+.show > .btn-accent.dropdown-toggle:hover {
+  background-color: #e62d9f;
+  color: #FFFFFF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-accent:hover {
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+}
+
+.btn-accent.disabled, .btn-accent.disabled:hover, .btn-accent.disabled:focus, .btn-accent.disabled.focus, .btn-accent.disabled:active, .btn-accent.disabled.active, .btn-accent:disabled, .btn-accent:disabled:hover, .btn-accent:disabled:focus, .btn-accent:disabled.focus, .btn-accent:disabled:active, .btn-accent:disabled.active, .btn-accent[disabled], .btn-accent[disabled]:hover, .btn-accent[disabled]:focus, .btn-accent[disabled].focus, .btn-accent[disabled]:active, .btn-accent[disabled].active,
+fieldset[disabled] .btn-accent,
+fieldset[disabled] .btn-accent:hover,
+fieldset[disabled] .btn-accent:focus,
+fieldset[disabled] .btn-accent.focus,
+fieldset[disabled] .btn-accent:active,
+fieldset[disabled] .btn-accent.active {
+  background-color: #da1a90;
+  border-color: #da1a90;
+}
+
+.btn-accent.btn-simple {
+  color: #da1a90;
+  border-color: #da1a90;
+}
+
+.btn-accent.btn-simple:hover, .btn-accent.btn-simple:focus, .btn-accent.btn-simple:not(:disabled):not(.disabled):active, .btn-accent.btn-simple:not(:disabled):not(.disabled).active, .btn-accent.btn-simple:not(:disabled):not(.disabled):active:focus, .btn-accent.btn-simple:not(:disabled):not(.disabled).active:focus, .btn-accent.btn-simple:active:hover, .btn-accent.btn-simple.active:hover,
+.show > .btn-accent.btn-simple.dropdown-toggle,
+.show > .btn-accent.btn-simple.dropdown-toggle:focus,
+.show > .btn-accent.btn-simple.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #e62d9f;
+  border-color: #e62d9f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-accent.btn-link {
+  color: #da1a90;
+}
+
+.btn-accent.btn-link:hover, .btn-accent.btn-link:focus, .btn-accent.btn-link:not(:disabled):not(.disabled):active, .btn-accent.btn-link:not(:disabled):not(.disabled).active, .btn-accent.btn-link:not(:disabled):not(.disabled):active:focus, .btn-accent.btn-link:not(:disabled):not(.disabled).active:focus, .btn-accent.btn-link:active:hover, .btn-accent.btn-link.active:hover,
+.show > .btn-accent.btn-link.dropdown-toggle,
+.show > .btn-accent.btn-link.dropdown-toggle:focus,
+.show > .btn-accent.btn-link.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #e62d9f;
   text-decoration: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -4808,6 +4871,117 @@ ngb-carousel .carousel-control-next-icon {
   background-color: #18ce0f;
 }
 
+.card-info {
+  border: 0;
+  border-radius: 0.1875rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #FFFFFF;
+  background-clip: border-box;
+  margin: 0 auto;
+}
+
+.card-info .header {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px 0;
+}
+
+.card-info .card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-info .header-text-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.card-info .text-divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-info .card-title {
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+.card-info .card-body {
+  padding: 1rem;
+  min-height: auto;
+}
+
+.card-info .checkbox {
+  margin-top: 20px;
+}
+
+.card-info .checkbox label {
+  margin-left: 17px;
+}
+
+.card-info .checkbox .checkbox-material {
+  padding-right: 12px;
+}
+
+.card-info .social-line {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-info .social-line .btn.btn-icon,
+.card-info .social-line .btn.btn-icon .btn-icon -mini {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-info .footer {
+  margin-bottom: 10px;
+  margin-top: 24px;
+}
+
+.card-info .card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-info[data-background-color="primary"] {
+  background-color: #17a2b8;
+}
+
+.card-info[data-background-color="accent"] {
+  background-color: #da1a90;
+}
+
+.card-info[data-background-color="danger"] {
+  background-color: #FF3636;
+}
+
+.card-info[data-background-color="content: '';"] {
+  background-color: #FFB236;
+}
+
+.card-info[data-background-color="info"] {
+  background-color: #2CA8FF;
+}
+
+.card-info[data-background-color="success"] {
+  background-color: #18ce0f;
+}
+
 .card-signup {
   max-width: 350px;
   margin: 0 auto;
@@ -4882,6 +5056,18 @@ ngb-carousel .carousel-control-next-icon {
 .card-plain .content {
   padding-left: 0;
   padding-right: 0;
+}
+
+.card-shadow {
+  border: none;
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-border {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .footer {
