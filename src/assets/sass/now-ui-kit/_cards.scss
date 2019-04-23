@@ -12,30 +12,39 @@
         min-height: 190px;
     }
 
+    // TODO: Use sass var names as `data-background-color` values
+    // NOTE: primary
     &[data-background-color="orange"]{
         background-color: $primary-color;
     }
 
+    // NOTE: danger
     &[data-background-color="red"]{
         background-color: $danger-color;
     }
-
+    // NOTE: warning
     &[data-background-color="yellow"]{
         background-color: $warning-color;
     }
 
+    // NOTE: blue
     &[data-background-color="blue"]{
         background-color: $info-color;
     }
 
+    // NOTE: green
     &[data-background-color="green"]{
         background-color: $success-color;
+    }
+ 
+    .card-img {
+        border-radius: 0;
     }
 }
 
 .card-info{
     border: 0;
-    border-radius: $border-radius-small;
+    border-radius: 0;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -45,7 +54,6 @@
     background-color: $white-bg;
     background-clip: border-box;
     margin: 0 auto;
-    // margin-bottom: 20px;
     
     .header {
         margin-left: 20px;
@@ -58,6 +66,15 @@
         background-color: $white-bg;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
+    .card-title{
+        margin-bottom: 0;
+        margin-top: 1rem;
+        font-size: $font-size-large;
+    }
+    .card-body{
+        padding: 1rem;
+        min-height: auto;
+    }    
     .header-text-divider {
         height: 0;
         margin: 0.5rem 0;
@@ -69,15 +86,6 @@
         margin-bottom: 15px;
         text-align: center;
     }
-    .card-title{
-        margin-bottom: 0;
-        margin-top: .5rem;
-    }
-    .card-body{
-        padding: 1rem;
-        min-height: auto;
-    }
-
     .checkbox{
         margin-top: 20px;
 
@@ -113,6 +121,7 @@
         // border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
 
+    // TODO: Remove `data-background-color` styles after `.card` class is updated
     &[data-background-color="primary"] {
         background-color: $primary-color;
     }
@@ -208,10 +217,122 @@
     }
 }
 
+.card-testimonial{
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+    box-shadow: none;
+    background-color: $white-bg;
+    background-clip: border-box;
+    margin: 0 auto;
+
+    .card-avatar {
+        max-width: 100px;
+        max-height: 100px;
+        margin-top: -50px;
+    }
+    
+    .header {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 5px 0;
+    }
+    .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: $white-bg;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+    .card-title{
+        margin-bottom: 0;
+        margin-top: 1rem;
+        font-size: $font-size-large;
+    }
+    .card-body{
+        padding: 1rem;
+        min-height: auto;
+    }    
+    .header-text-divider {
+        height: 0;
+        margin: 0.5rem 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+    }
+    .text-divider{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .checkbox{
+        margin-top: 20px;
+
+        label{
+            margin-left: 17px;
+        }
+        .checkbox-material{
+            padding-right: 12px;
+        }
+    }
+
+    .social-line{
+        margin-top: 20px;
+        text-align: center;
+
+        .btn.btn-icon,
+        .btn.btn-icon .btn-icon -mini{
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .footer{
+        margin-bottom: 10px;
+        margin-top: 24px;
+    }
+
+    .card-footer {
+        padding: 0.75rem 1.25rem;
+        background-color: $white-bg;
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    // TODO: Remove `data-background-color` styles after `.card` class is updated
+    &[data-background-color="primary"] {
+        background-color: $primary-color;
+    }
+
+    &[data-background-color="accent"] {
+        background-color: $accent-color;
+    }
+
+    &[data-background-color="danger"] {
+        background-color: $danger-color;
+    }
+
+    &[data-background-color="content: '\e879';"] {
+        background-color: $warning-color;
+    }
+
+    &[data-background-color="info"] {
+        background-color: $info-color;
+    }
+
+    &[data-background-color="success"] {
+        background-color: $success-color;
+    }
+}
+
 // Card Utilities
+// NOTE: Could these be imported as @mixins?
 .card-shadow {
     border: none;
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card-border {

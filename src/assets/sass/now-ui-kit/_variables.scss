@@ -163,7 +163,7 @@ $font-size-h2:                 2.5em        !default; // ~ 35px
 $font-size-h3:                 1.825em      !default; // ~ 28px
 $font-size-h4:                 1.5em        !default; // ~ 24px
 $font-size-h5:                 1.3em        !default; // ~ 22px
-$font-size-h6:                 .9em         !default; // ~ 12px
+$font-size-h6:                 1rem         !default; // ~ 12px
 
 $font-paragraph:               1.2em        !default;
 $font-size-navbar:             1em          !default;
@@ -177,8 +177,9 @@ $font-size-blockquote:         1.1em        !default; // ~ 15px
 
 $font-weight-light:             300         !default;
 $font-weight-normal:            400         !default;
-$font-weight-semi:              600         !default;
-$font-weight-bold:              700         !default;
+$font-weight-semi:              500         !default;
+$font-weight-bold:              600         !default;
+$font-weight-bolder:            700         !default;
 
 $line-height-general:        1.5            !default;
 $line-height-nav-link:       1.625rem       !default;

@@ -130,7 +130,7 @@ section .team .team-player div.bg-d20 .bg-d20:after {
   margin-bottom: 1.5rem;
 }
 
-.app-fw-500 p, .app-fw-500 span {
+.font-weight-semi p, .font-weight-semi span {
   font-weight: 500;
 }
 
@@ -148,7 +148,7 @@ section .team .team-player div.bg-d20 .bg-d20:after {
   animation-name: fadeIn;
 }
 
-.svg-inline--fa.fa-lg {
+.card-footer .svg-inline--fa.fa-lg {
   vertical-align: -0.75em;
 }
 
