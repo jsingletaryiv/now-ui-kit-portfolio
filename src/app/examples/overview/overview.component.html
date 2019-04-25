@@ -1,10 +1,8 @@
 <!-- Content Wrapper -->
 <div class="wrapper">
-    <!-- Full Page Parallax Effect -->
-    <div class="page-header clear-filter" filter-color="primary">
-        <div class="page-header-image rellax-header" data-rellax-speed="-7" 
-             style="background-image: url('assets/img/headers/contact-header.jpg');"></div>
-
+    <!-- ## Full Landing Page / Parallax Effect ## -->
+    <div class="page-header clear-filter" filter-color="">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/headers/contact-header.jpg');"></div>
         <div class="container">
             <div class="content-center brand">
                 <!-- <img class="n-logo" src="assets/img/now-logo.png" alt=""> -->
@@ -44,9 +42,9 @@
 
     </div>
 
-    <div class="main">
-        <!-- NOTE: Intro Section -->
-        <section class="section-bkgd">
+    <div class="main border border-2 border-top border-info">
+        <!-- ## Section : Welcome ## -->
+        <section class="section-welcome">
             <div class="container">
                 <!-- TODO: Add FA layers before intro (icon over / circle)  -->
                 <div class="row">
@@ -55,7 +53,7 @@
                         <!-- <div class="divider"></div> -->
 
                         <div class="app-div-item">
-                            <!-- NOTE: Update Bootstrap to v4.3 to leverage Responsive Font Sizes. -->
+                            <!-- TODO: Update Bootstrap to v4.3 to leverage Responsive Font Sizes -->
                             <h3>
                                 Hi, I'm James and welcome to my tiny sliver of cyber-space. I'm a <q>Full-Stack</q> Developer located in Tampa, Florida.
                                 Creator of Cloud-Based Software &amp; Web Applications serving up Big Data in real-time by way of custom built APIs &amp; Microservices.
@@ -64,7 +62,7 @@
                         </div>
                     
                     </article> 
-                    
+
                     <article class="app-article-item col-md-4">
                         <div class="app-div-item text-primary font-weight-semi flow-text">
                             <p>
@@ -88,85 +86,95 @@
 
         <div class="separator-grey separator-thin"></div>
 
-        <!-- Definition of "Full-Stack" Section -->
-        <section class="">
-            <article class="app-article-item">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-uppercase text-center">
-                            <h3>What is <q>Full-Stack</q> Development?</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-info">
-                    <div class="row no-gutters">
-                        <div class="col-md-5">
-                            <img src="/assets/img/full-stack-dev.jpg" class="card-img" alt="Full-Stack Developer">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title mt-0 mb-4">
-                                    A progressive approach to software development that requires the developer to have detailed knowledge of 
-                                    the Software / Solution Stack.
-                                </h5>
-                                <!-- <div class="separator-grey separator-thin"></div> -->
-                                <p class="card-text">
-                                    A <q>Full-Stack</q> developer will be highly skilled in multiple languages, frameworks, SDKs / APIs. Capable of
-                                    weaving in / out of all layers of a project while following standards / best practices. This doesn NOT imply 
-                                    that the developer has mastered <i>everything</i> within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; 
-                                    it DOES imply however, that one has the ability to work with the <strong class="text-secondary">front-end</strong>, 
-                                    <strong class="text-secondary">back-end</strong>, and <strong class="text-secondary">database</strong> layers with minimal assistance.
-                                </p>
-                                <p class="card-text text-right">
-                                    <small class="text-muted">September 2018 - <cite title="Coding Dojo"> codingdojo.com</cite></small>
-                                </p>
+        <!-- ## Section : Define "Full-Stack" Development ## -->
+        <section class="section-definition">
+            <div class="container">
+                <article class="app-article-item">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-uppercase text-center">
+                                <h3>Define <q>Full-Stack</q> Development</h3>
                             </div>
-
                         </div>
-
                     </div>
-                    
-                </div>
+                    <div class="card card-info">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="/assets/img/full-stack-dev.jpg" class="card-img" alt="Full-Stack Developer">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title mt-0 mb-4">
+                                        A progressive approach to software development requiring one to have detailed knowledge of 
+                                        the entire Software / Solution Stack.
 
-            </article>
+                                        <!-- Thus being proficient in a variety of languages &amp; frameworks. -->
+                                    </h5>
+                                    <!-- <div class="separator-grey separator-thin"></div> -->
+                                    <p class="card-text">
+                                        The term <strong class="text-secondary"><q>Full-Stack</q></strong> refers to the stack of technologies that serves up the  
+                                        application. One must be skilled in multiple languages, frameworks, SDK / API - Capable of weaving in / out of the Stack 
+                                        while following set standards &amp; best practices. This doesn NOT imply that the developer has mastered <i>everything</i> 
+                                        within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; it DOES imply however, that one has the ability 
+                                        to work with the many layers of the Stack with minimal assistance.
+                                    </p>
+                                    <p class="card-text text-right">
+                                        <small class="text-muted">September 2018 - <cite title="Coding Dojo"> codingdojo.com</cite></small>
+                                    </p>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        
+                    </div>
+    
+                </article>
+
+            </div>
 
         </section>
 
         <div class="separator-grey separator-thin"></div>
         
-        <section class="app-section-config app-section-container">
-            <div class="section-image image-abs-pos" style="background-image: url('assets/img/headers/contact-header.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <article class="app-article-item col-md-8 mx-auto text-center"> 
-                            <!-- TODO: Generate quotes.component using code below  -->
-                            <div class="card card-testimonial">
-                                <div class="card-avatar">
-                                    <fa-layers [fixedWidth]="true">
-                                        <fa-icon [icon]="['fas', 'circle']"></fa-icon>
-                                        <fa-icon [inverse]="true" [icon]="['fas', 'quote-right']" transform="grow-2"></fa-icon>
-                                    </fa-layers>
-                                </div>
-                                <div class="card-body">
-                                    <!-- <h3 class="card-title">Alexa Hailey</h3> -->
-                                    to change ourselves. Spread love everywhere you go. Let no one ever come to you without leaving happier.
-                                    <p class="card-description">
-                                        "When we are no longer able to change a situation - we are challenged Problems are not stop signs, they are guidelines."
-                                    </p>
-                                    
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="category text-primary">Human Resource Director</h6>
-                                </div>
+        <!-- ## Section : Inspiring Quotes ## -->
+        <section class="section-quotes">
+
+            <div class="page-header clear-filter" filter-color="primary">
+
+            </div>
+
+            <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/headers/contact-header.jpg');"></div>
+            <div class="section-image" style="background-image: url('assets/img/headers/contact-header.jpg');"></div>
+            <div class="container">
+                <div class="row">
+                    <article class="app-article-item col-md-8 mx-auto text-center"> 
+                        <!-- TODO: Generate quotes.component using code below  -->
+                        <div class="card card-testimonial">
+                            <div class="card-avatar">
+                                <fa-layers [fixedWidth]="true">
+                                    <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+                                    <fa-icon [inverse]="true" [icon]="['fas', 'quote-right']" transform="grow-2"></fa-icon>
+                                </fa-layers>
+                            </div>
+                            <div class="card-body">
+                                <!-- <h3 class="card-title">Alexa Hailey</h3> -->
+                                to change ourselves. Spread love everywhere you go. Let no one ever come to you without leaving happier.
+                                <p class="card-description">
+                                    "When we are no longer able to change a situation - we are challenged Problems are not stop signs, they are guidelines."
+                                </p>
                                 
                             </div>
+                            <div class="card-footer">
+                                <h6 class="category text-primary">Human Resource Director</h6>
+                            </div>
+                            
+                        </div>
 
-                        </article>
-
-                    </div>
+                    </article>
 
                 </div>
-            
+
             </div>
             
             <!-- <div>
@@ -182,7 +190,7 @@
         
         <div class="separator-grey separator-thin"></div>
 
-        <!-- Technical Overview -->
+        <!-- ## Technical Overview ## -->
         <section class="section-team text-center">
             <div class="container">
                 <!-- <h2 class="title">Technical Skills / Proficiency</h2> -->
@@ -193,7 +201,7 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <!-- NOTE: Overview #1 -->
+                        <!-- ## Overview 1 ## -->
                         <div class="col-md-3 team-player">
                             <div class="card card-info">
                                 <div class="card-header">
@@ -227,7 +235,7 @@
                             </div>
 
                         </div>
-                        <!-- NOTE: Overview #2 -->
+                        <!-- ## Overview 2 ## -->
                         <div class="col-md-3 team-player">
                             <div class="card card-info">
                                 <div class="card-header">                                                                                    
@@ -257,7 +265,7 @@
                             </div>
 
                         </div>
-                        <!-- NOTE: Overview #3 -->
+                        <!-- ## Overview 3 ## -->
                         <div class="col-md-3 team-player">                                
                             <div class="card card-info">
                                 <div class="card-header">                                                                                    
@@ -287,7 +295,7 @@
                             </div>
 
                         </div>
-                        <!-- NOTE: Overview #4 -->
+                        <!-- ## Overview 4 ## -->
                         <div class="col-md-3 team-player">
                             <div class="card card-info">
                                 <div class="card-header">                                                                          
