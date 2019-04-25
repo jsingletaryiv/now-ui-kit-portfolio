@@ -1,5 +1,9 @@
 /*     brand Colors              */
 /*      light colors         */
+.border.border-2 {
+  border-top-width: 2px !important;
+}
+
 .index-page .page-header .logo-main {
   font-size: 5rem;
 }

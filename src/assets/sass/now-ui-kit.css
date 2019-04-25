@@ -4907,10 +4907,11 @@ ngb-carousel .carousel-control-next-icon {
   margin-bottom: 0;
   margin-top: 1rem;
   font-size: 1.25em;
+  font-weight: 500;
 }
 
 .card-info .card-body {
-  padding: 1rem;
+  padding: .5rem 1rem;
   min-height: auto;
 }
 
@@ -5599,7 +5600,7 @@ section .row + .category, .section .row + .category {
   position: relative;
 }
 
-.section-image.image-abs-pos {
+.section-image.section-bkgd-image {
   background-position: center center;
   background-size: cover;
   margin-top: 0;

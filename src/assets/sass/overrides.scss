@@ -4,7 +4,13 @@
 // Disable / Enable Bootstrap Options
 // NOTE: Options are located in Bootstrap `_variables`partial
 
-// Layout Overrides
+// App / Layout Overrides
+.border{
+    &.border-2 {
+        border-top-width: 2px !important;
+    }
+}
+
 .index-page {
     .page-header {
         .logo-main {
@@ -128,7 +134,7 @@ section .team {
     }
 }
 
-// Typography Classes / Overrides
+// ## Typography Classes / Overrides ##
 .h1-seo {
     font-size: 2.8em;
     text-transform: uppercase;
@@ -165,7 +171,7 @@ section .team {
     animation-name: fadeIn;
 }
 
-// Icons & Buttons
+// ## Icons & Buttons ##
 // TODO: Ad-Hoc Solution - Find Better Solution
 .card-footer .svg-inline--fa.fa-lg {
     vertical-align: -0.75em;
@@ -228,7 +234,7 @@ section .team {
 }
 
 // TODO: Make these extensible by creating _partial files for each animation // 
-// Animations
+// ## Animations ##
 // Fade-In
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
@@ -277,7 +283,7 @@ section .team {
     to { opacity: 0; }
 }
 
-// Responsive Overrides
+// ## Responsive Overrides ## 
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
@@ -285,6 +291,7 @@ section .team {
 }
 
 // Bootstrap Extended
+// Layout
 .col-xs-5ths, .col-sm-5ths {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
