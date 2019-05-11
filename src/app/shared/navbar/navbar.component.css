@@ -6,4 +6,16 @@
   padding: 0.5rem;
   line-height: 0.5rem;
 }
+
+.navbar .dropdown-menu .dropdown-item .current-status.status-green {
+  color: limegreen;
+}
+
+.navbar .dropdown-menu .dropdown-item .current-status.status-yellow {
+  color: yellow;
+}
+
+.navbar .dropdown-menu .dropdown-item .current-status.status-red {
+  color: crimson;
+}
 /*# sourceMappingURL=navbar.component.css.map */

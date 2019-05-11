@@ -1,10 +1,26 @@
 // Overrides Styles
-.navbar .navbar-brand {
-    font-family: 'Unica One', Helvetica, Helvetica Neue, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 2em;
+.navbar {
+    .navbar-brand {
+        font-family: 'Unica One', Helvetica, Helvetica Neue, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 2em;
+    
+        text-transform: uppercase;
+        padding: 0.5rem;
+        line-height: 0.5rem;
+    }
 
-    text-transform: uppercase;
-    padding: 0.5rem;
-    line-height: 0.5rem;
+    .dropdown-menu .dropdown-item {
+        .current-status {
+            &.status-green {
+                color: limegreen;
+            }
+            &.status-yellow {
+                color: yellow;
+            }
+            &.status-red {
+                color: crimson;
+            }
+        }
+    }
 }
