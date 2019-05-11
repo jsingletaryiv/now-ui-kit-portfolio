@@ -48,18 +48,24 @@
               </li>
               <li class="nav-item">
                 <div ngbDropdown class="dropdown">
-                  <!-- NOTE: Cursor for dropdown btn does not change to pointer on `mouseover` event -->
+                  <!-- FIXME: Cursor for dropdown btn does not change to pointer on `mouseover` event -->
                   <a class="nav-link dropdown-toggle" ngbDropdownToggle>
                     <!-- <fa-icon [icon]="['fas', 'link']" size="lg"></fa-icon> -->
-                    <fa-icon [icon]="['fas', 'user-astronaut']" size="lg"></fa-icon>
+                    <!-- <fa-icon [icon]="['fas', 'ellipsis-v']" size="lg"></fa-icon> -->
+                    WhoAmI
                   </a>
                   <div class="dropdown-menu" ngbDropdownMenu x-placement="bottom">
-                    <a class="dropdown-header"><fa-icon [icon]="['fas', 'chevron-right']" size="lg" [fixedWidth]="true"></fa-icon>  Details &amp; Links</a>
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'info-circle']" size="lg" [fixedWidth]="true"></fa-icon> Background Info</a> 
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Skills</a>
+                    <a class="dropdown-header"><fa-icon [icon]="['fas', 'terminal']" size="lg" [fixedWidth]="true"></fa-icon>&nbsp; jsingletaryiv</a>
+                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'id-badge']" size="lg" [fixedWidth]="true"></fa-icon> Background</a> 
+                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Overview</a>
                     <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'file-download']" size="lg" [fixedWidth]="true"></fa-icon> Download Resume</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'traffic-light']" size="lg" [fixedWidth]="true"></fa-icon> Current Status</a>
+                    <a class="dropdown-item" href="#">
+                      <span class="current-status status-green">
+                        <fa-icon [icon]="['fas', 'circle']" size="lg" [fixedWidth]="true"></fa-icon>
+                      </span>
+                      Current Status
+                    </a>
                     <!-- <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">One more separated link</a> -->
                   </div>

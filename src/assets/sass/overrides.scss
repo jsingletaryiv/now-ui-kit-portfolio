@@ -2,10 +2,15 @@
 @import "now-ui-kit/variables";
 
 // Disable / Enable Bootstrap Options
-// NOTE: Options are located in Bootstrap `_variables`partial
+// ## Options are located in Bootstrap `_variables`partial ## //
 
-// Layout Overrides
-.index-page {
+// ## App / Layout Overrides ## //
+.border-2 {
+    border-width: 2px !important;
+    
+}
+
+.overview-page {
     .page-header {
         .logo-main {
             font-size: 5rem;
@@ -18,13 +23,11 @@
             }
         }
     }
-}
 
-section .team {
-    .team-player {
+    section {
         fa-icon {
             color: #fff;
-
+    
             &.stacked{
                 position: absolute;
                 font-size: 4rem;
@@ -33,9 +36,8 @@ section .team {
                 z-index: 1;
             }
         }
-
-
-        div.bg-d4 {
+    
+        .bg-d4 {
             width: 0;
             height: 0;
             border-left: 100px solid transparent;
@@ -43,7 +45,7 @@ section .team {
             border-bottom: 200px solid $primary-color;
         }
         
-        div.bg-d4-inverted {
+        .bg-d4-inverted {
             width: 0;
             height: 0;
             border-left: 100px solid transparent;
@@ -51,20 +53,20 @@ section .team {
             border-top: 200px solid $accent-color;
         }
         
-        div.bg-d6 {
+        .bg-d6 {
             width: 100px;
             height: 100px;
             background: $accent-color;
         }
-
-        div.bg-d8 {
+    
+        .bg-d8 {
             width: 0;
             height: 0;
             border: 50px solid transparent;
             border-bottom: 70px solid $accent-color;
             position: relative;
             top: -50px;
-
+    
             .bg-d8:after {
                 content: '';
                 position: absolute;
@@ -76,15 +78,15 @@ section .team {
                 border-top: 70px solid $accent-color;
             }
         }
-
-        div.bg-d10 {
+    
+        .bg-d10 {
             width: 0;
             height: 0;
             border: 50px solid transparent;
             border-bottom: 20px solid $accent-color;
             position: relative;
             top: -50px;
-
+    
             .bg-d10:after {
                 content: '';
                 position: absolute;
@@ -96,13 +98,13 @@ section .team {
                 border-top: 70px solid $accent-color;
             }
         }
-
-        div.bg-d20 {
+    
+        .bg-d20 {
             width: 100px;
             height: 55px;
             background: $accent-color;
             position: relative;
-
+    
             .bg-d20:before {
                 content: "";
                 position: absolute;
@@ -126,31 +128,109 @@ section .team {
                 border-top: 25px solid $accent-color;
             }
         }
+
+        // FIXME: Directional arrow not working //
+        &.section-down-arrow:after {
+            right: 2%;
+            left: auto;
+            bottom: -60px;
+            content: '';
+            position: absolute;
+            border-top: 60px #fff solid;
+            border-left: transparent 60px solid;
+            border-right: transparent 60px solid;
+            z-index: 2;
+        }
+
+        .section-down-arrow:after {
+            right: 2%;
+            left: auto;
+            bottom: -60px;
+            content: '';
+            position: absolute;
+            border-top: 60px #fff solid;
+            border-left: transparent 60px solid;
+            border-right: transparent 60px solid;
+            z-index: 2;
+        }
     }
 }
 
-// Typography Classes / Overrides
+
+// ## Typography Class / Overrides ##
 .h1-seo {
     font-size: 2.8em;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.category {
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #9A9A9A;
+.card {
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    // background-color: #fff;
+    background-clip: border-box;
+
+    &.card-technologies {
+        // text-align: center;
+        position: relative;
+
+        li {
+            border-bottom-color: rgba(255, 255, 255, .3);
+        }
+    }
+
+    &.card-raised {
+        // box-shadow: 0 20px 50px 0 rgba(0,0,0,.3);
+        box-shadow: 0px 2px 12px 5px rgba(0,0,0,0.3);
+    }
+
+    .category {
+        text-transform: uppercase;
+        font-weight: $font-weight-normal;
+        font-size: .75rem;
+        color: rgb(230, 230, 230);
+    }
+
+    // ## typography colors ## //
+    &[data-background-color]:not([data-background-color="gray"]) {
+        color: #fff;
+    }
+    &[data-background-color]:not([data-background-color="white"]) {
+        color: rgb(53, 53, 53);
+    }
+    &[data-background-color]:not([data-background-color="black"]) {
+        color: #fff;
+    }
 }
 
 .card-title {
     margin-bottom: 1.5rem;
 }
 
-.app-fw-500 p, .app-fw-500 span  {
-    font-weight: 500;
+.card-description,
+.description,
+.footer-big p{
+    color: $accent-color;
+    // font-size: $font-size-base;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-weight: $font-weight-light;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
-// Navbar Overrides
+.font-weight-light p,
+.font-weight-light span  {
+    font-weight: $font-weight-light;
+}
+
+.font-weight-semi p,
+.font-weight-semi span  {
+    font-weight: $font-weight-semi;
+}
+
+
+// ## Navbar Overrides ## //
 // Fading In / Out Navbar Logo
 .app-navbar-logo {
     display: none;
@@ -166,8 +246,9 @@ section .team {
     animation-name: fadeIn;
 }
 
-// Icons & Buttons
-.svg-inline--fa.fa-lg {
+// ## Icons & Buttons ## //
+// TODO: Ad-Hoc - Find Better Solution
+.card-footer .svg-inline--fa.fa-lg {
     vertical-align: -0.75em;
 }
 
@@ -178,11 +259,11 @@ section .team {
     fa-icon {
         position: relative;
         -webkit-animation-name: blink;
-        animation-name: blink;
+            animation-name: blink;
         -webkit-animation-duration: 1000ms;
-        animation-duration: 1000ms;
+            animation-duration: 1000ms;
         -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
         opacity: 1;
     }
 
@@ -190,37 +271,39 @@ section .team {
         fa-icon:nth-child(1) {
             position: relative;
             -webkit-animation-name: blink;
-            animation-name: blink;
+                animation-name: blink;
             -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
+                animation-duration: 1000ms;
             -webkit-animation-delay: 0;
-            animation-delay: 0;
+                animation-delay: 0;
             -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
             opacity: 1;          
         }
+
         fa-icon:nth-child(2) {
             position: relative;
             -webkit-animation-name: blink;
-            animation-name: blink;
+                animation-name: blink;
             -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
+                animation-duration: 1000ms;
             -webkit-animation-delay: 500ms;
-            animation-delay: 500ms;
+                animation-delay: 500ms;
             -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
             opacity: 1;          
         }
+
         fa-icon:nth-child(3) {
             position: relative;
             -webkit-animation-name: blink;
-            animation-name: blink;
+                animation-name: blink;
             -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
+                animation-duration: 1000ms;
             -webkit-animation-delay: 500ms;
-            animation-delay: 500ms;
+                animation-delay: 500ms;
             -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
             opacity: 1;          
         }
 
@@ -228,7 +311,7 @@ section .team {
 }
 
 // TODO: Make these extensible by creating _partial files for each animation // 
-// Animations
+// ## Animations ## //
 // Fade-In
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
@@ -277,15 +360,15 @@ section .team {
     to { opacity: 0; }
 }
 
-// Responsive Overrides
+// ## Responsive Overrides ## //
 @media (min-width: 1200px) {
-
     .container {
         max-width: 1200px;
     }
 }
 
-// Bootstrap Extended
+// ## Bootstrap Extended ## //
+// Layout
 .col-xs-5ths, .col-sm-5ths {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;

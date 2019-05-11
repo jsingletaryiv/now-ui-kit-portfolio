@@ -52,12 +52,12 @@ export class ComponentsComponent implements OnInit, OnDestroy {
         const navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.add('navbar-transparent');
         const body = document.getElementsByTagName('body')[0];
-        body.classList.add('index-page');
+        body.classList.add('overview-page');
     }
     ngOnDestroy() {
         const navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.remove('navbar-transparent');
         const body = document.getElementsByTagName('body')[0];
-        body.classList.remove('index-page');
+        body.classList.remove('overview-page');
     }
 }

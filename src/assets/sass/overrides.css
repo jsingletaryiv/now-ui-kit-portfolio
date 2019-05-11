@@ -1,19 +1,23 @@
 /*     brand Colors              */
 /*      light colors         */
-.index-page .page-header .logo-main {
+.border-2 {
+  border-width: 2px !important;
+}
+
+.overview-page .page-header .logo-main {
   font-size: 5rem;
 }
 
-.index-page .page-header .container > .content-center {
+.overview-page .page-header .container > .content-center {
   top: 70%;
   left: 15%;
 }
 
-section .team .team-player fa-icon {
+.overview-page section fa-icon {
   color: #fff;
 }
 
-section .team .team-player fa-icon.stacked {
+.overview-page section fa-icon.stacked {
   position: absolute;
   font-size: 4rem;
   left: 0;
@@ -21,7 +25,7 @@ section .team .team-player fa-icon.stacked {
   z-index: 1;
 }
 
-section .team .team-player div.bg-d4 {
+.overview-page section .bg-d4 {
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
@@ -29,7 +33,7 @@ section .team .team-player div.bg-d4 {
   border-bottom: 200px solid #17a2b8;
 }
 
-section .team .team-player div.bg-d4-inverted {
+.overview-page section .bg-d4-inverted {
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
@@ -37,13 +41,13 @@ section .team .team-player div.bg-d4-inverted {
   border-top: 200px solid #da1a90;
 }
 
-section .team .team-player div.bg-d6 {
+.overview-page section .bg-d6 {
   width: 100px;
   height: 100px;
   background: #da1a90;
 }
 
-section .team .team-player div.bg-d8 {
+.overview-page section .bg-d8 {
   width: 0;
   height: 0;
   border: 50px solid transparent;
@@ -52,7 +56,7 @@ section .team .team-player div.bg-d8 {
   top: -50px;
 }
 
-section .team .team-player div.bg-d8 .bg-d8:after {
+.overview-page section .bg-d8 .bg-d8:after {
   content: '';
   position: absolute;
   left: -50px;
@@ -63,7 +67,7 @@ section .team .team-player div.bg-d8 .bg-d8:after {
   border-top: 70px solid #da1a90;
 }
 
-section .team .team-player div.bg-d10 {
+.overview-page section .bg-d10 {
   width: 0;
   height: 0;
   border: 50px solid transparent;
@@ -72,7 +76,7 @@ section .team .team-player div.bg-d10 {
   top: -50px;
 }
 
-section .team .team-player div.bg-d10 .bg-d10:after {
+.overview-page section .bg-d10 .bg-d10:after {
   content: '';
   position: absolute;
   left: -50px;
@@ -83,14 +87,14 @@ section .team .team-player div.bg-d10 .bg-d10:after {
   border-top: 70px solid #da1a90;
 }
 
-section .team .team-player div.bg-d20 {
+.overview-page section .bg-d20 {
   width: 100px;
   height: 55px;
   background: #da1a90;
   position: relative;
 }
 
-section .team .team-player div.bg-d20 .bg-d20:before {
+.overview-page section .bg-d20 .bg-d20:before {
   content: "";
   position: absolute;
   top: -25px;
@@ -102,7 +106,7 @@ section .team .team-player div.bg-d20 .bg-d20:before {
   border-bottom: 25px solid #da1a90;
 }
 
-section .team .team-player div.bg-d20 .bg-d20:after {
+.overview-page section .bg-d20 .bg-d20:after {
   content: "";
   position: absolute;
   bottom: -25px;
@@ -114,23 +118,99 @@ section .team .team-player div.bg-d20 .bg-d20:after {
   border-top: 25px solid #da1a90;
 }
 
+.overview-page section.section-down-arrow:after {
+  right: 2%;
+  left: auto;
+  bottom: -60px;
+  content: '';
+  position: absolute;
+  border-top: 60px #fff solid;
+  border-left: transparent 60px solid;
+  border-right: transparent 60px solid;
+  z-index: 2;
+}
+
+.overview-page section .section-down-arrow:after {
+  right: 2%;
+  left: auto;
+  bottom: -60px;
+  content: '';
+  position: absolute;
+  border-top: 60px #fff solid;
+  border-left: transparent 60px solid;
+  border-right: transparent 60px solid;
+  z-index: 2;
+}
+
 .h1-seo {
   font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.category {
+.card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+}
+
+.card.card-technologies {
+  position: relative;
+}
+
+.card.card-technologies li {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.card.card-raised {
+  -webkit-box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card .category {
   text-transform: uppercase;
   font-weight: 400;
-  color: #9A9A9A;
+  font-size: .75rem;
+  color: #e6e6e6;
+}
+
+.card[data-background-color]:not([data-background-color="gray"]) {
+  color: #fff;
+}
+
+.card[data-background-color]:not([data-background-color="white"]) {
+  color: #353535;
+}
+
+.card[data-background-color]:not([data-background-color="black"]) {
+  color: #fff;
 }
 
 .card-title {
   margin-bottom: 1.5rem;
 }
 
-.app-fw-500 p, .app-fw-500 span {
+.card-description,
+.description,
+.footer-big p {
+  color: #da1a90;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-weight-light p,
+.font-weight-light span {
+  font-weight: 300;
+}
+
+.font-weight-semi p,
+.font-weight-semi span {
   font-weight: 500;
 }
 
@@ -148,7 +228,7 @@ section .team .team-player div.bg-d20 .bg-d20:after {
   animation-name: fadeIn;
 }
 
-.svg-inline--fa.fa-lg {
+.card-footer .svg-inline--fa.fa-lg {
   vertical-align: -0.75em;
 }
 
