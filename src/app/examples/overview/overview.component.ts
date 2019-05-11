@@ -41,17 +41,18 @@ export class OverviewComponent implements OnInit, OnDestroy {
     // pageSubTitle = 'Since MCMXCVIII';
 
     // TODO: Add section titles as needed //
-    // Section 1
+    // ## Section - Welcome ## //
     section1Title = 'Forging Concepts into Creation //';
     section1Text = '';
+
+    // ## Section - Defining Full-Stack ## //
+
+    // ## Section - Quotes ## //
+    sectionQuotesTitle = 'Jack of all Trades //';
+
+    // ## Section - Mission Statement ## //
     missionTitle = 'Mission Statement //';
     missionText = '';
-
-    // Section 2
-
-    // Section 3
-
-    // Section 4
 
     constructor( private renderer: Renderer, config: NgbAccordionConfig) {
         config.closeOthers = true;
@@ -67,17 +68,19 @@ export class OverviewComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        // ## Init Rellax Elements ## \\
         const rellaxHeader = new Rellax('.rellax-header');
+        // const rellaxQuotes = new Rellax('.rellax-quotes');
 
         const navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.add('navbar-transparent');
         const body = document.getElementsByTagName('body')[0];
-        body.classList.add('index-page');
+        body.classList.add('overview-page');
     }
     ngOnDestroy() {
         const navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.remove('navbar-transparent');
         const body = document.getElementsByTagName('body')[0];
-        body.classList.remove('index-page');
+        body.classList.remove('overview-page');
     }
 }
