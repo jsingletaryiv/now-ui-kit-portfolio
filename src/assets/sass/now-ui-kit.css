@@ -3056,7 +3056,7 @@ p {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .title.title-up {
@@ -4871,13 +4871,16 @@ ngb-carousel .carousel-control-next-icon {
   background-color: #18ce0f;
 }
 
+.card[data-background-color]:not([data-background-color="gray"]) {
+  color: #fff;
+}
+
 .card .card-img {
   border-radius: 0;
 }
 
 .card-info {
   border: 0;
-  border-radius: 0;
   position: relative;
   display: inline-block;
   width: 100%;
@@ -4899,7 +4902,6 @@ ngb-carousel .carousel-control-next-icon {
 .card-info .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #FFFFFF;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -4911,8 +4913,8 @@ ngb-carousel .carousel-control-next-icon {
 }
 
 .card-info .card-body {
-  padding: .5rem 1rem;
-  min-height: auto;
+  padding: 1rem 1rem .4rem;
+  min-height: 100%;
 }
 
 .card-info .header-text-divider {
@@ -5062,6 +5064,24 @@ ngb-carousel .carousel-control-next-icon {
 .card-plain .content {
   padding-left: 0;
   padding-right: 0;
+}
+
+.card-technologies ul {
+  list-style: none;
+  padding: 0;
+  max-width: 240px;
+  margin: 10px auto;
+}
+
+.card-technologies ul > li {
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.card-technologies .icon {
+  padding: 10px 0 0;
 }
 
 .card-testimonial {
@@ -5239,15 +5259,15 @@ ngb-carousel .carousel-control-next-icon {
   content: " ";
 }
 
-.index-page .page-header {
+.index-page .page-header, .overview-page .page-header {
   height: 100vh;
 }
 
-.index-page .page-header .container > .content-center {
+.index-page .page-header .container > .content-center, .overview-page .page-header .container > .content-center {
   top: 37%;
 }
 
-.index-page .page-header .category-absolute {
+.index-page .page-header .category-absolute, .overview-page .page-header .category-absolute {
   position: absolute;
   top: 100vh;
   margin-top: -60px;
@@ -5280,11 +5300,11 @@ ngb-carousel .carousel-control-next-icon {
   color: #FFFFFF;
 }
 
-.landing-page .section-team .team .team-player img {
+.landing-page .section-technical-focus .technical-focus .technical-focus-item img {
   max-width: 100px;
 }
 
-.landing-page .section-team .team-player {
+.landing-page .section-technical-focus .technical-focus-item {
   margin-bottom: 15px;
 }
 
@@ -5578,46 +5598,213 @@ section, .section {
   padding: 70px 0;
   position: relative;
   background: #FFFFFF;
+  z-index: 1;
 }
 
 section .row + .category, .section .row + .category {
   margin-top: 15px;
 }
 
-.section-full-screen {
-  height: 100vh;
+section .category,
+section .section-description, .section .category,
+.section .section-description {
+  text-align: center;
 }
 
-.section-image {
-  background-size: cover;
-  background-position: center center;
+section .category h5.description,
+section .section-description h5.description, .section .category h5.description,
+.section .section-description h5.description {
+  max-width: 750px;
+  margin: 35px auto 75px;
+  color: #da1a90;
+  font-weight: 300;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-welcome {
   position: relative;
+}
+
+.section-definition {
+  position: relative;
+}
+
+.section-definition article {
+  padding-bottom: 70px;
+}
+
+.section-technical-focus {
+  height: 500px;
+  width: 100%;
+  padding: 0;
+  margin: 25vh 0 42vh 0;
+  position: relative;
+}
+
+.section-technical-focus .section-technical-focus-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center 540px;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+}
+
+.section-technical-focus .section-technical-focus-image + .category {
+  padding-top: 15px;
+}
+
+.section-technical-focus .technical-focus {
+  position: relative;
+}
+
+.section-technical-focus .technical-focus .technical-focus-title {
+  margin: -100px 0 100px 0;
+}
+
+.section-technical-focus footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
 
-.section-image .container {
+.section-technical-focus .container {
+  height: 100%;
   z-index: 2;
+  text-align: center;
   position: relative;
 }
 
-.section-image.section-bkgd-image {
-  background-position: center center;
-  background-size: cover;
-  margin-top: 0;
-  min-height: 740px;
-  height: 100%;
+.section-technical-focus .container .technical-focus-item .card.card-info {
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.section-image:after {
+.section-technical-focus .container .technical-focus-item .card.card-info .card-avatar {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: -50px;
+}
+
+.section-technical-focus .container .technical-focus-item .card.card-info .card-header {
+  padding: 1.25rem 0.75rem 0.75rem 0.75rem;
+}
+
+.section-technical-focus .container .technical-focus-item .card.card-info .card-body {
+  background-color: white;
+}
+
+.section-technical-focus.page-header-small {
+  min-height: 60vh;
+  max-height: 440px;
+}
+
+.section-technical-focus:after, .section-technical-focus:before {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   height: 100%;
   display: block;
   left: 0;
   top: 0;
   content: "";
-  background-color: rgba(0, 0, 0, 0);
+}
+
+.section-technical-focus:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-technical-focus[filter-color="orange"] {
+  background: rgba(44, 44, 44, 0.2);
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(224, 23, 3, 0.6)));
+  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  /* Standard syntax */
+}
+
+.section-technical-focus[filter-color="primary"] {
+  background: rgba(44, 44, 44, 0.1);
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-35deg, rgba(44, 44, 44, 0.1), rgba(6, 106, 238, 0.3));
+  /* Standard syntax */
+}
+
+.section-quotes {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.section-quotes .section-quotes-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center 600px;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+}
+
+.section-quotes .section-quotes-image + .category {
+  padding-top: 15px;
+}
+
+.section-quotes footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.section-quotes .container {
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  padding-top: 8%;
+}
+
+.section-quotes .container .card-testimonial .card-avatar {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: -50px;
+}
+
+.section-quotes.page-header-small {
+  min-height: 60vh;
+  max-height: 440px;
+}
+
+.section-quotes:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-quotes[filter-color="orange"] {
+  background: rgba(44, 44, 44, 0.2);
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(224, 23, 3, 0.6)));
+  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  /* Standard syntax */
+}
+
+.section-quotes[filter-color="primary"] {
+  background: rgba(44, 44, 44, 0.1);
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-35deg, rgba(44, 44, 44, 0.1), rgba(6, 106, 238, 0.3));
+  /* Standard syntax */
 }
 
 .page-header {
@@ -5630,16 +5817,10 @@ section .row + .category, .section .row + .category {
 .page-header .page-header-image {
   position: absolute;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   width: 100%;
   height: 100vh;
   z-index: -1;
-}
-
-.page-header footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 .page-header .container {
@@ -5673,6 +5854,12 @@ section .row + .category, .section .row + .category {
 .page-header.page-header-small {
   min-height: 60vh;
   max-height: 440px;
+}
+
+.page-header footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .page-header:after, .page-header:before {
@@ -7365,7 +7552,7 @@ section .row + .category, .section .row + .category {
     right: 21%;
     top: 55%;
   }
-  .index-page .category-absolute {
+  .overview-page .category-absolute {
     top: 90vh;
   }
 }

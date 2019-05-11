@@ -13,28 +13,29 @@
     }
 
     // TODO: Use sass var names as `data-background-color` values
-    // NOTE: primary
+    // ## primary ## //
     &[data-background-color="orange"]{
         background-color: $primary-color;
     }
-
-    // NOTE: danger
+    // ## danger ## //
     &[data-background-color="red"]{
         background-color: $danger-color;
     }
-    // NOTE: warning
+    // ## warning ## //
     &[data-background-color="yellow"]{
         background-color: $warning-color;
     }
-
-    // NOTE: blue
+    // ## blue ## //
     &[data-background-color="blue"]{
         background-color: $info-color;
     }
-
-    // NOTE: green
+    // ## green ## //
     &[data-background-color="green"]{
         background-color: $success-color;
+    }
+    // ## font color ## //
+    &[data-background-color]:not([data-background-color="gray"]) {
+        color: #fff;
     }
  
     .card-img {
@@ -42,9 +43,9 @@
     }
 }
 
-.card-info{
+.card-info {
     border: 0;
-    border-radius: 0;
+    // border-radius: 0;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -63,7 +64,7 @@
     .card-header {
         padding: 0.75rem 1.25rem;
         margin-bottom: 0;
-        background-color: $white-bg;
+        // background-color: $white-bg;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
     .card-title{
@@ -73,8 +74,8 @@
         font-weight: $font-weight-semi;
     }
     .card-body{
-        padding: .5rem 1rem;
-        min-height: auto;
+        padding: 1rem 1rem .4rem;
+        min-height: 100%;
     }    
     .header-text-divider {
         height: 0;
@@ -148,7 +149,7 @@
     }
 }
 
-.card-signup{
+.card-signup {
     max-width: 350px;
     margin: 0 auto;
 
@@ -203,7 +204,7 @@
     }
 }
 
-.card-plain{
+.card-plain {
     background: transparent;
     box-shadow: none;
 
@@ -215,6 +216,26 @@
     .content{
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+.card-technologies {
+    ul {
+        list-style: none;
+        padding: 0;
+        max-width: 240px;
+        margin: 10px auto;
+
+        > li {
+            // color: #fff;
+            text-align: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(136,136,136,.3);
+        }
+    }
+
+    .icon {
+        padding: 10px 0 0;
     }
 }
 
@@ -242,32 +263,38 @@
         margin-right: 20px;
         padding: 5px 0;
     }
+
     .card-header {
         padding: 0.75rem 1.25rem;
         margin-bottom: 0;
         background-color: $white-bg;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
+
     .card-title{
         margin-bottom: 0;
         margin-top: 1rem;
         font-size: $font-size-large;
     }
+
     .card-body{
         padding: 1rem;
         min-height: auto;
-    }    
+    }  
+      
     .header-text-divider {
         height: 0;
         margin: 0.5rem 0;
         overflow: hidden;
         border-top: 1px solid #e9ecef;
     }
+
     .text-divider{
         margin-top: 15px;
         margin-bottom: 15px;
         text-align: center;
     }
+
     .checkbox{
         margin-top: 20px;
 
