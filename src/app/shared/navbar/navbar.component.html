@@ -5,74 +5,80 @@
                 James Singletary
             </a> -->
             <a id="appNavbarLogo" [routerLink]="['/index']" class="app-navbar-logo">
-              <div>
-                <!-- <div class="navbar-logo"> -->
-                  <!-- <i class="fas fa-crown fa-3x" data-fa-transform="rotate-345 left-6 down-2"></i> -->
-                  <!-- <fa-icon [icon]="['fas', 'crown']" size="3x" transform="rotate-345 left-6 down-2"></fa-icon> -->
-                <!-- </div> -->
-                <div class="navbar-brand">
-                  <!-- <fa-icon [icon]="['fas', 'terminal']" size="xs"></fa-icon> -->
-                  <!-- <i class="n-logo mdi mdi-meteor"></i> -->
-                  <fa-icon class="logo-main drop-shadow-sm" flip="horizontal" [icon]="['fas', 'meteor']" ></fa-icon>                  
-                  <span> JamesSingletaryiv</span>
-                </div>
-              </div>
+                <div>
+                    <!-- <div class="navbar-logo"> -->
+                      <!-- <i class="fas fa-crown fa-3x" data-fa-transform="rotate-345 left-6 down-2"></i> -->
+                      <!-- <fa-icon [icon]="['fas', 'crown']" size="3x" transform="rotate-345 left-6 down-2"></fa-icon> -->
+                    <!-- </div> -->
+                    <div class="navbar-brand">
+                        <!-- <fa-icon [icon]="['fas', 'terminal']" size="xs"></fa-icon> -->
+                        <!-- <i class="n-logo mdi mdi-meteor"></i> -->
+                        <span class="navbar-brand-icon">
+                            <fa-icon class="logo-main pr-2" [icon]="['fab', 'js-square']" transform="grow-12"></fa-icon>
+                        </span>               
+                        <span class="text-lowercase"> {{ navbarTitle | lowercase }} </span>
+                    </div>
+
+                </div> 
+
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
-              <span class="navbar-toggler-bar bar1"></span>
-              <span class="navbar-toggler-bar bar2"></span>
-              <span class="navbar-toggler-bar bar3"></span>
+            <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarToggler" 
+                                                          aria-controls="navbarTogglerDemo02" aria-expanded="false" 
+                                                          aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="primary">
+        <div class="collapse navbar-collapse" data-color="primary">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#" target="">
-                    <p>Overview</p>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#" target="">
-                    <p>About</p>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#" target="">
-                    <p>Projects</p>
-                  </a>  
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#" target="">
-                    <p>Contact</p>
-                  </a>
-              </li>
-              <li class="nav-item">
-                <div ngbDropdown class="dropdown">
-                  <!-- FIXME: Cursor for dropdown btn does not change to pointer on `mouseover` event -->
-                  <a class="nav-link dropdown-toggle" ngbDropdownToggle>
-                    <!-- <fa-icon [icon]="['fas', 'link']" size="lg"></fa-icon> -->
-                    <!-- <fa-icon [icon]="['fas', 'ellipsis-v']" size="lg"></fa-icon> -->
-                    WhoAmI
-                  </a>
-                  <div class="dropdown-menu" ngbDropdownMenu x-placement="bottom">
-                    <a class="dropdown-header"><fa-icon [icon]="['fas', 'terminal']" size="lg" [fixedWidth]="true"></fa-icon>&nbsp; jsingletaryiv</a>
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'id-badge']" size="lg" [fixedWidth]="true"></fa-icon> Background</a> 
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Overview</a>
-                    <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'file-download']" size="lg" [fixedWidth]="true"></fa-icon> Download Resume</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <span class="current-status status-green">
-                        <fa-icon [icon]="['fas', 'circle']" size="lg" [fixedWidth]="true"></fa-icon>
-                      </span>
-                      Current Status
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="">
+                        <p>Welcome</p>
                     </a>
-                    <!-- <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">One more separated link</a> -->
-                  </div>
-                  
-                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="">
+                        <p>Full-Stack</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="">
+                        <p>Overview</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="">
+                        <p>Projects</p>
+                    </a>  
+                </li>
+                <li class="nav-item">
+                    <div ngbDropdown class="dropdown">
+                        <!-- FIXME: Cursor for dropdown btn does not change to pointer on `mouseover` event -->
+                        <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+                            <!-- <fa-icon [icon]="['fas', 'link']" size="lg"></fa-icon> -->
+                            <!-- <fa-icon [icon]="['fas', 'ellipsis-v']" size="lg"></fa-icon> -->
+                            WhoAmI
+                        </a>
+                        <div class="dropdown-menu" ngbDropdownMenu x-placement="bottom">
+                            <a class="dropdown-header"><fa-icon [icon]="['fas', 'terminal']" size="lg" [fixedWidth]="true"></fa-icon>&nbsp; jsingletaryiv</a>
+                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'id-badge']" size="lg" [fixedWidth]="true"></fa-icon> Background Info</a> 
+                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Skills</a>
+                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'file-download']" size="lg" [fixedWidth]="true"></fa-icon> Download Résumé</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <span class="current-status status-green">
+                                    <fa-icon [icon]="['fas', 'circle']" size="lg" [fixedWidth]="true"></fa-icon>
+                                </span>
+                                Current Status
+                            </a>
+                            <!-- <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">One more separated link</a> -->
+                        </div>
+                      
+                    </div>
 
-              </li>
+                </li>
 
             </ul>
 

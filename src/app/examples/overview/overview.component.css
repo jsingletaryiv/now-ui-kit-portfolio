@@ -2,25 +2,24 @@ ngb-progressbar {
   margin-top: 5rem;
 }
 
-section.section-welcome article.app-article-item:nth-child(1) {
-  border-right: 1px solid #E3E3E3;
+section.section-welcome article.app-article-item:nth-child(1), .section.section-welcome article.app-article-item:nth-child(1) {
+  border-right: 1px solid #212121;
 }
 
-section.section-welcome article.app-article-item:nth-child(1) > div.app-div-item:nth-child(1) {
+section.section-welcome article.app-article-item:nth-child(1) > div.app-div-item:nth-child(1), .section.section-welcome article.app-article-item:nth-child(1) > div.app-div-item:nth-child(1) {
   text-align: end;
 }
 
-section.section-welcome article.app-article-item:nth-child(2) > div.app-div-item {
-  display: block;
-  padding-top: 5px;
+section.section-welcome article.app-article-item:nth-child(2) > div.app-div-item, .section.section-welcome article.app-article-item:nth-child(2) > div.app-div-item {
+  padding-top: 0;
   width: 100%;
 }
 
-.drop-shadow-sm {
-  text-shadow: 3px 3px 4px #212121;
+.text-shadow-sm {
+  text-shadow: 1px 1px 1px #212121;
 }
 
-.drop-shadow-lg {
-  text-shadow: 6px 6px 7px #212121;
+.text-shadow-lg {
+  text-shadow: 3px 3px 3px #212121;
 }
 /*# sourceMappingURL=overview.component.css.map */

@@ -1,11 +1,14 @@
 // Overrides Styles
 .navbar {
     .navbar-brand {
-        font-family: 'Unica One', Helvetica, Helvetica Neue, Arial, sans-serif;
-        font-weight: 400;
-        font-size: 2em;
+        // TODO: Update value with `$mono-space-family` variable
+        // font-family: 'Roboto Mono', monospace;
+        // font-family: 'Cute Font', cursive;
+
+        font-weight: regular;
+        font-size: 1.5em;
     
-        text-transform: uppercase;
+        // text-transform: uppercase;
         padding: 0.5rem;
         line-height: 0.5rem;
     }
