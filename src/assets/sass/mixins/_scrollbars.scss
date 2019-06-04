@@ -1,0 +1,78 @@
+// Custom @mixin for custom scrollbar
+//
+// ::-webkit-scrollbar the scrollbar.
+// ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+// ::-webkit-scrollbar-thumb the draggable scrolling handle.
+// ::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+// ::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+// ::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+// ::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+//
+// ========================================================================================================================= //
+
+// TODO: Find solution for transparent track
+.scrollbar {
+   height: 100%;
+   // width: 100vw;
+   overflow-x: hidden;
+   overflow-y: overflow;
+}
+
+// Main nested div
+.force-overflow {
+   min-height: 300px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+   width: 10px;
+}
+
+// .scrollbar-primary::-webkit-scrollbar * {
+//    background: transparent;
+//    // background-color: rgba(0,0,0,0.3);
+//    // display: none;
+// }
+
+.scrollbar-primary::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -moz-box-shadow: in set 0 0 6px rgba(0,0,0,0.3);
+   -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -o-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background-color: rgba(245,245,245,0.2);
+   // background: transparent;
+   // display: none;
+   // border-radius: 10px;
+   width: 10px;
+}
+
+.scrollbar-primary::-webkit-scrollbar-track-piece {
+   // background-color: transparent;
+   // opacity: 0.2;
+   display: none;
+   border-radius: 10px;
+}
+
+// .scrollbar-primary::-webkit-scrollbar-track-piece:start {
+//    background: transparent url('assets/img/flags/PL.png') repeat-y;
+//    display: none;
+// }
+
+// .scrollbar-primary::-webkit-scrollbar-track-piece:end {
+//    background: transparent url('assets/img/flags/PL.png') repeat-y;
+//    display: none;
+// }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -moz-box-shadow: in set 0 0 6px rgba(0,0,0,0.3);
+   -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -o-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background-color: $accent-color;
+   border-radius: 10px;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb:hover {
+   background-color: $accent-states-color;
+}

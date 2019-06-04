@@ -4,169 +4,75 @@
 // Disable / Enable Bootstrap Options
 // ## Options are located in Bootstrap `_variables`partial ## //
 
-// ## App / Layout Overrides ## //
-.border-2 {
-    border-width: 2px !important;
-    
-}
+// ## Variable Overrides ## //
+$text-dark-grey: rgb(53, 53, 53);
+$text-light: rgb(248, 249, 250);
+$text-green: rgb(35, 205, 25);
 
+// ## App / Layout Overrides ## //
 .overview-page {
     .page-header {
         .logo-main {
-            font-size: 5rem;
-        }
-
-        .container {
-            > .content-center{
-                top: 70%;
-                left: 15%;
-            }
+            font-size: 1.5rem;
         }
     }
 
-    section {
-        fa-icon {
-            color: #fff;
-    
-            &.stacked{
-                position: absolute;
-                font-size: 4rem;
-                left: 0;
-                right: 0;
-                z-index: 1;
-            }
-        }
-    
-        .bg-d4 {
-            width: 0;
-            height: 0;
-            border-left: 100px solid transparent;
-            border-right: 100px solid transparent;
-            border-bottom: 200px solid $primary-color;
-        }
-        
-        .bg-d4-inverted {
-            width: 0;
-            height: 0;
-            border-left: 100px solid transparent;
-            border-right: 100px solid transparent;
-            border-top: 200px solid $accent-color;
-        }
-        
-        .bg-d6 {
-            width: 100px;
-            height: 100px;
-            background: $accent-color;
-        }
-    
-        .bg-d8 {
-            width: 0;
-            height: 0;
-            border: 50px solid transparent;
-            border-bottom: 70px solid $accent-color;
-            position: relative;
-            top: -50px;
-    
-            .bg-d8:after {
-                content: '';
-                position: absolute;
-                left: -50px;
-                top: 70px;
-                width: 0;
-                height: 0;
-                border: 50px solid transparent;
-                border-top: 70px solid $accent-color;
-            }
-        }
-    
-        .bg-d10 {
-            width: 0;
-            height: 0;
-            border: 50px solid transparent;
-            border-bottom: 20px solid $accent-color;
-            position: relative;
-            top: -50px;
-    
-            .bg-d10:after {
-                content: '';
-                position: absolute;
-                left: -50px;
-                top: 20px;
-                width: 0;
-                height: 0;
-                border: 50px solid transparent;
-                border-top: 70px solid $accent-color;
-            }
-        }
-    
-        .bg-d20 {
-            width: 100px;
-            height: 55px;
-            background: $accent-color;
-            position: relative;
-    
-            .bg-d20:before {
-                content: "";
-                position: absolute;
-                top: -25px;
-                left: 0;
-                width: 0;
-                height: 0;
-                border-left: 50px solid transparent;
-                border-right: 50px solid transparent;
-                border-bottom: 25px solid $accent-color;
-            }
-            .bg-d20:after {
-                content: "";
-                position: absolute;
-                bottom: -25px;
-                left: 0;
-                width: 0;
-                height: 0;
-                border-left: 50px solid transparent;
-                border-right: 50px solid transparent;
-                border-top: 25px solid $accent-color;
-            }
-        }
-
-        // FIXME: Directional arrow not working //
-        &.section-down-arrow:after {
-            right: 2%;
-            left: auto;
-            bottom: -60px;
-            content: '';
-            position: absolute;
-            border-top: 60px #fff solid;
-            border-left: transparent 60px solid;
-            border-right: transparent 60px solid;
-            z-index: 2;
-        }
-
-        .section-down-arrow:after {
-            right: 2%;
-            left: auto;
-            bottom: -60px;
-            content: '';
-            position: absolute;
-            border-top: 60px #fff solid;
-            border-left: transparent 60px solid;
-            border-right: transparent 60px solid;
-            z-index: 2;
-        }
-    }
+    // [data-background-color]:not([data-background-color="gray"]) {
+    //     color: #fff;
+    // }
 }
 
+.border-1 {
+    border-width: 1px !important;
+}
 
-// ## Typography Class / Overrides ##
+.border-2 {
+    border-width: 2px !important;
+}
+
+.border-accent {
+    border-color: $accent-color !important;
+}
+
+// ## Typography Class / Overrides ## //
 .h1-seo {
     font-size: 2.8em;
     text-transform: uppercase;
     font-weight: 600;
 }
 
+.text-light-grey {
+    color: $light-gray;
+}
+
+.text-medium-grey {
+    color: $dark-gray;
+}
+
+.text-dark-grey {
+    color: $text-dark-grey;
+}
+
+.text-green {
+    color: $text-green;
+}
+
+.font-weight-light,
+.font-weight-light p,
+.font-weight-light span  {
+    font-weight: $font-weight-light;
+}
+
+.font-weight-semi,
+.font-weight-semi p,
+.font-weight-semi span  {
+    font-weight: $font-weight-semi;
+}
+
+// ## Card Overrides ## //
 .card {
     flex-direction: column;
-    min-width: 0;
+    // max-width: 300px;
     word-wrap: break-word;
     // background-color: #fff;
     background-clip: border-box;
@@ -192,43 +98,461 @@
         color: rgb(230, 230, 230);
     }
 
-    // ## typography colors ## //
-    &[data-background-color]:not([data-background-color="gray"]) {
-        color: #fff;
+    .card-title {
+        margin-bottom: .25rem;
     }
-    &[data-background-color]:not([data-background-color="white"]) {
-        color: rgb(53, 53, 53);
+
+    .card-description,
+    .description,
+    .footer-big p{
+        color: $text-dark-grey;
+        // font-size: $font-size-base;
+        font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+        font-weight: $font-weight-light;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
     }
-    &[data-background-color]:not([data-background-color="black"]) {
-        color: #fff;
+}
+
+// ## Section Overrides ## //
+section, .section {
+    padding: 5rem 0;
+    position: relative;
+    background: $white-bg;
+    // z-index: 1;
+
+    article { 
+        width: 100%;
+        padding-bottom: 2rem; 
+    }
+
+    fa-icon {
+        // color: #fff;
+
+        &.stacked {
+            position: absolute;
+            font-size: 4rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+
+    // ## Section Header Elements ## //
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center 780px;
+            width: 100vw;
+            height: 650px;
+            z-index: 0;
+
+            & + .category {
+                padding-top: 15px;
+            }
+        }
+        // ## Header Icons ## //
+        .section-header-icon {
+            padding: 1rem 0 2rem;
+        }   
+    }
+
+    .row + .category {
+        margin-top: $margin-base-vertical;
+    }
+
+    .category,
+    .section-description {
+        // color: $font;
+        text-align: center;
+
+        h5.description {
+            width: 100%;
+            margin: 1rem auto 2rem;
+            color: $accent-color;
+            font-weight: $font-weight-semi;
+            font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    // ## Background Colors ## //
+    &[data-background-color="primary"] {
+        background-color: $primary-color;
+    }
+
+    &[data-background-color="accent"] {
+        background-color: $accent-color;
+    }
+
+    &[data-background-color="danger"] {
+        background-color: $danger-color;
+    }
+
+    &[data-background-color="content: '\e879';"] {
+        background-color: $warning-color;
+    }
+
+    &[data-background-color="info"] {
+        background-color: $info-color;
+    }
+
+    &[data-background-color="success"] {
+        background-color: $success-color;
+    }
+
+    &[data-background-color="light"] {
+        background-color: $light-bg;
+    }
+
+    &[data-background-color="dark"] {
+        background-color: $dark-bg;
+    }
+
+    &[data-background-color="smoke"] {
+        background-color: $smoke-bg;
+    }
+
+    &[data-background-color="white"] {
+        background-color: $white-bg;
+        color: $text-dark-grey;
+    }
+
+    &[data-background-color="black"] {
+        background-color: $black-bg;
+        color: $text-light;
     }
 }
 
-.card-title {
-    margin-bottom: 1.5rem;
+// ## Section - Welcome ## //
+.section-welcome {
+    // position: relative;
+    &.section-down-arrow:after {
+        left: auto;
+        right: 5%;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $white-bg 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
 }
 
-.card-description,
-.description,
-.footer-big p{
-    color: $accent-color;
-    // font-size: $font-size-base;
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-    font-weight: $font-weight-light;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+// ## Section - Defining Full-Stack Development ## //
+.section-definition {
+    // position: static;
+    padding: 0 0 5rem 0;
+
+    &.section-down-arrow:after {
+        left: 6%;
+        right: auto;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $accent-color 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
+
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center -2vh;
+            width: 100vw;
+            height: 100%;
+            z-index: 0;
+
+            // mask-image: linear-gradient(black, white, transparent);
+            // -webkit-mask-image: linear-gradient(black, white, transparent);
+        }
+
+        // ## Header Icon ## //
+        .section-header-icon {
+            padding: 6rem 0 2rem 0;
+        }
+    }
+
+    article {
+        padding-bottom: 2rem;
+    }
+
+    // &[filter-color="accent"] {
+    //     @include linear-gradient-deg(-35deg, rgba($black-color,.3), rgba($accent-color,.5));
+    // }
 }
 
-.font-weight-light p,
-.font-weight-light span  {
-    font-weight: $font-weight-light;
+// ## Section - Overviews ## //
+.section-overviews {
+    &.section-down-arrow:after {
+        left: auto;
+        right: 6%;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $white-bg 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
+
+    article .card-technologies-group {
+        // position: relative;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
 }
 
-.font-weight-semi p,
-.font-weight-semi span  {
-    font-weight: $font-weight-semi;
+// ## Section - Technical Focus ## //
+.section-technical-focus {
+    padding: 0 0 5rem 0;
+    // margin: 0 0 42vh 0;
+
+    // color: $white-color;
+    // position: relative;
+    // ## Section Header Elements ## //
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center -15vh;
+            width: 100vw;
+            height: 90%;
+            z-index: 0;
+
+            // mask-image: linear-gradient(black, white, transparent);
+            // -webkit-mask-image: linear-gradient(black, white, transparent);
+        }
+
+        // ## Header Icon ## //
+        .section-header-icon {
+            padding: 6rem 0 2rem 0;
+        }
+    }
+
+    .technical-focus {
+        position: relative;
+
+        // .technical-focus-title {
+        //     margin: -100px 0 100px 0;
+        // }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .container-fluid {
+        height: 100%;
+        z-index: 2;
+        text-align: center;
+        position: relative;
+        // padding-top: 8%;
+
+        // ## Technical Focus Cards ## //
+        .technical-focus-item {
+            padding: 1rem;
+
+            // &.toggle-card {
+            //     pointer-events: auto;
+            //     transition: all $general-transition-time ease-in;
+            // }
+
+            // &.taggle-card:hover {
+            //     -webkit-transform: translateY(-4vh);
+            //     transform: translateY(-4vh);  
+            //     will-change: transform;
+            // }
+
+            .card {
+                &.card-info {
+                    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+                    background-color: rgba(255, 255, 255, .6);
+
+                    .card-avatar {
+                        max-width: 100px;
+                        max-height: 100px;
+                        margin-top: -50px;
+                    }
+
+                    .card-header {
+                        padding: 1.25rem 0.75rem 0.75rem 0.75rem;
+                        // background-color: rgba(255, 255, 255, .8);
+                    }
+
+                    .card-body {
+                        background-color: rgba(255, 255, 255, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    // &:after,
+    // &:before{
+    //     position: absolute;
+    //     z-index: -1;
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    //     left: 0;
+    //     top: 0;
+    //     content: "";
+    // }
+
+    // &:before {
+    //     background-color: rgba(0,0,0,.5);
+    // }
+
+    &[filter-color="orange"] {
+        background-image: linear-gradient(rgba($black-color,.2), rgba(224, 23, 3, .6));
+    }
+
+    &[filter-color="primary"] {
+        background-image: linear-gradient-deg(-35deg, rgba($black-color,.5), rgba($primary-color,.3));
+    }
+
+    &[filter-color="info"] {
+        background-image: linear-gradient-deg(-35deg, rgba($black-color,.3), rgba($info-color,.5));
+    }
+
+    &.section-down-arrow:after {
+        left: 6%;
+        right: auto;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $primary-color 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
 }
 
+// ## Section - Projects ## //
+.section-projects {
+    height: 100%;
+    width: 100vw;
+
+    padding: 0 0 5rem 0;
+
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            width: 100vw;
+            height: 100%;
+            z-index: 0;
+
+            // mask-image: linear-gradient(black, white, transparent);
+            // -webkit-mask-image: linear-gradient(black, white, transparent);
+        }
+
+        // ## Header Icon ## //
+        .section-header-icon {
+            padding: 6rem 0 2rem 0;
+        }
+    }
+
+    article {
+        padding-bottom: 2rem;
+    }
+
+    &[filter-color="primary"]{
+        background-image: linear-gradient-deg(-35deg, rgba($black-color,.1), rgba(6, 106, 238, .3));
+    }
+
+    &.section-down-arrow:after {
+        left: auto;
+        right: 6%;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $white-bg 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
+}
+
+// ## Section - About ## //
+.section-about {
+    height: 100%;
+    width: 100vw;
+
+    padding: 0 0 5rem 0;
+
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            width: 100vw;
+            height: 100%;
+            z-index: 0;
+
+            // mask-image: linear-gradient(black, white, transparent);
+            // -webkit-mask-image: linear-gradient(black, white, transparent);
+        }
+
+        // ## Header Icon ## //
+        .section-header-icon {
+            padding: 6rem 0 2rem 0;
+        }
+    }
+
+    article {
+        padding-bottom: 2rem;
+    }
+
+    .section-description {
+        text-align: center;
+
+        h5.description {
+            width: 100%;
+            margin: 1rem auto 2rem;
+            color: $text-light;
+            font-weight: $font-weight-light;
+            font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    &.section-down-arrow:after {
+        left: auto;
+        right: 6%;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $white-bg 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
+
+    [filter-color="primary"]{
+        background-image: linear-gradient-deg(-35deg, rgba($black-color,.1), rgba(6, 106, 238, .3));
+    }
+
+    [data-background-color="dark-grey"] {
+        background-color: $text-dark-grey;
+        color: $text-green;
+    }
+}
 
 // ## Navbar Overrides ## //
 // Fading In / Out Navbar Logo
@@ -252,7 +576,116 @@
     vertical-align: -0.75em;
 }
 
-// Blinking Icon
+// ## Background Geo-Shapes ## //
+.geo-shape {
+    .geo-d4 {
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 200px solid $primary-color;
+    }
+    
+    .geo-d4-inverted {
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 200px solid $accent-color;
+    }
+    
+    .geo-d6 {
+        width: 100px;
+        height: 100px;
+        background: $accent-color;
+    }
+
+    .geo-d8 {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-bottom: 70px solid $accent-color;
+        position: relative;
+        top: -50px;
+
+        &.geo-d8:after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 70px;
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top: 70px solid $accent-color;
+        }
+    }
+
+    .geo-d10 {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-bottom: 20px solid $accent-color;
+        position: relative;
+        top: -50px;
+
+        &.geo-d10:after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top: 70px solid $accent-color;
+        }
+    }
+
+    .geo-d20 {
+        width: 100px;
+        height: 55px;
+        background: $accent-color;
+        position: relative;
+
+        &.geo-d20:before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 25px solid $accent-color;
+        }
+        &.geo-d20:after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 25px solid $accent-color;
+        }
+    }
+}
+
+// ## Background Colors ## //
+[data-background-color="dark-grey"] {
+    background-color: $text-dark-grey;
+    color: $text-light;
+}
+
+[data-background-color="green"] {
+    background-color: $text-green;
+    color: $text-light;
+}
+
+// TODO: Make these extensible by creating _partial files for each animation // 
+// ## Animations ## //
+// Blinking Icon Set
+// TODO: Needs to be completed
 .app-icon-blink {
     position: relative;
     
@@ -310,9 +743,7 @@
     }
 }
 
-// TODO: Make these extensible by creating _partial files for each animation // 
-// ## Animations ## //
-// Fade-In
+// ## Fade-In --
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -328,7 +759,7 @@
     100% { opacity: 1; }
 }
 
-// Fade-Out
+// ## Fade-Out --
 @-webkit-keyframes fadeOut {
     100% { opacity: 1; }
     0% { opacity: 0; }
@@ -354,7 +785,7 @@
     to { opacity: 0; }
 }
 
-// Blinking 
+// ## Blinking ## //
 @keyframes blink {
     from { opacity: 1; }
     to { opacity: 0; }
@@ -365,6 +796,32 @@
     .container {
         max-width: 1200px;
     }
+}
+
+// ## Global Filters ## //
+// TODO: Refactor `desaturate` class with @keyframes rule
+.desaturate-100 {
+    filter: grayscale(100%);
+    transition: .2s ease-in;
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}
+
+[filter-gradient="primary"] {
+    -webkit-mask-image: linear-gradient($black-color, $primary-color, transparent);
+    mask-image: linear-gradient($black-color, $primary-color, transparent);
+}
+
+[filter-gradient="accent"] {
+    -webkit-mask-image: linear-gradient($black-color, $accent-color, transparent);
+    mask-image: linear-gradient($black-color, $accent-color, transparent);
+}
+
+[filter-gradient="info"] {
+    -webkit-mask-image: linear-gradient($black-color, $info-color, transparent);
+    mask-image: linear-gradient($black-color, $info-color, transparent);
 }
 
 // ## Bootstrap Extended ## //
