@@ -1,15 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="500" role="navigation">
     <div class="container">
         <div class="navbar-translate">
-            <!-- <a class="navbar-brand" [routerLink]="['/index']" placement="bottom" ngbTooltip="Designed by Invision. Coded by Creative Tim">
-                James Singletary
-            </a> -->
-            <a id="appNavbarLogo" [routerLink]="['/index']" class="app-navbar-logo">
+            <a id="appNavbarLogo" class="app-navbar-logo">
                 <div>
-                    <!-- <div class="navbar-logo"> -->
-                      <!-- <i class="fas fa-crown fa-3x" data-fa-transform="rotate-345 left-6 down-2"></i> -->
-                      <!-- <fa-icon [icon]="['fas', 'crown']" size="3x" transform="rotate-345 left-6 down-2"></fa-icon> -->
-                    <!-- </div> -->
                     <div class="navbar-brand">
                         <!-- <fa-icon [icon]="['fas', 'terminal']" size="xs"></fa-icon> -->
                         <!-- <i class="n-logo mdi mdi-meteor"></i> -->
@@ -28,27 +21,29 @@
                 <span class="navbar-toggler-bar bar1"></span>
                 <span class="navbar-toggler-bar bar2"></span>
                 <span class="navbar-toggler-bar bar3"></span>
+                
             </button>
+
         </div>
         <div class="collapse navbar-collapse" data-color="primary">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="">
+                    <a class="nav-link" routerLink="." fragment="welcome">
                         <p>Welcome</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="">
+                    <a class="nav-link" routerLink="." fragment="define">
                         <p>Full-Stack</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="">
+                    <a class="nav-link" routerLink="." fragment="overview">
                         <p>Overview</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="">
+                    <a class="nav-link" routerLink="." fragment="projects">
                         <p>Projects</p>
                     </a>  
                 </li>
@@ -62,9 +57,9 @@
                         </a>
                         <div class="dropdown-menu" ngbDropdownMenu x-placement="bottom">
                             <a class="dropdown-header"><fa-icon [icon]="['fas', 'terminal']" size="lg" [fixedWidth]="true"></fa-icon>&nbsp; jsingletaryiv</a>
-                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'id-badge']" size="lg" [fixedWidth]="true"></fa-icon> Background Info</a> 
-                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Skills</a>
-                            <a class="dropdown-item" href="#"><fa-icon [icon]="['fas', 'file-download']" size="lg" [fixedWidth]="true"></fa-icon> Download Résumé</a>
+                            <a class="dropdown-item" href="#about"><fa-icon [icon]="['fas', 'id-badge']" size="lg" [fixedWidth]="true"></fa-icon> Background Info</a> 
+                            <a class="dropdown-item" href="#skills"><fa-icon [icon]="['fas', 'tools']" size="lg" [fixedWidth]="true"></fa-icon> Technical Skills</a>
+                            <a class="dropdown-item" href="assets/resume/jsingletary-resume-uiux-2019.docx"><fa-icon [icon]="['fas', 'file-download']" size="lg" [fixedWidth]="true"></fa-icon> Download Résumé</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
                                 <span class="current-status status-green">

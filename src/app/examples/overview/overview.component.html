@@ -24,7 +24,7 @@
                     <div class="row app-icon-group">
                         <!-- TODO: Finish the group arrow animation -->
                         <div class="col-md-12 app-icon-blink app-icon-motion">
-                            <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon>
+                            <fa-icon [icon]="['fas', 'angle-down']" size="lg"></fa-icon>
                         </div>
                         <!-- <div class="col-md-12 app-icon-blink app-icon-motion">
                             <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon> 
@@ -37,21 +37,14 @@
                 </div>
 
             </div>
-            <!-- <h6 class="category category-absolute">Designed by
-                <a href="https://invisionapp.com/" target="_blank">
-                    <img src="assets/img/invision-white-slim.png" class="invision-logo" />
-                </a>. Coded by
-                <a href="https://www.creative-tim.com" target="_blank">
-                    <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo" />
-                </a>.
-            </h6> -->
+
         </div>
 
     </div>
     <div class="scrollbar scrollbar-primary">
         <div class="main force-overflow">
             <!-- ## Section : Welcome ## -->
-            <section class="section-welcome section-header section-down-arrow border-top border-2 border-info" data-background-color="white">
+            <section id="welcome" class="section-welcome section-header section-down-arrow border-top border-2 border-info" data-background-color="white">
                 <div class="container">
                     <div class="d-flex flex-column">
                         <div class="section-header-icon mx-auto text-primary h2">
@@ -68,7 +61,7 @@
                                 <div class="app-div-item text-justify">
                                     <!-- TODO: Update Bootstrap to v4.3 to leverage Responsive Font Sizes -->
                                     <h3 class="text-right">
-                                        Hi, I'm James and welcome to my tiny sliver of cyber-space. I'm a <q>Full-Stack</q> Developer located in Tampa, Florida.
+                                        Hi, I'm James and welcome to my small sliver of cyberspace. I'm a <q>Full-Stack</q> Developer located in <span class="text-primary">Tampa, Florida</span>.
                                         Creator of Cloud-Based Software and Web Applications - Serving up Big Data on the fly by way of custom built APIs &amp; Microservices
                                     </h3>
                             
@@ -99,7 +92,7 @@
             </section>
     
             <!-- ## Section : Defining "Full-Stack" Development ## -->
-            <section class="section-definition section-header section-down-arrow border-top border-1 border-info" data-background-color="accent">
+            <section id="define" class="section-definition section-header section-down-arrow border-top border-1 border-info" data-background-color="accent">
                 <div class="section-header-image" style="background-image: url('assets/img/headers/falcon-rocket.jpg');" filter-gradient="accent"></div>
                 <div class="container">
                     <div class="d-md-flex flex-md-column">
@@ -127,18 +120,23 @@
                                 <div class="card card-info my-5">
                                     <div class="row no-gutters">
                                         <div class="col-md-5 full-stack-img clear-filter">
-                                            <img src="/assets/img/full-stack-developer-collage.png" filter-color="success" class="card-img img-fluid desaturate-100" alt="Full-Stack Developer">
+                                            <img src="/assets/img/full-stack-developer-collage.png" class="card-img img-fluid desaturate-100"
+                                                                                                    filter-color="success" 
+                                                                                                    alt="Full-Stack Developer">
                                         </div>
                                         <div class="col-md-7">
                                             <div class="card-body">
                                                 <p class="card-text text-justify">
-                                                    The term <strong class="text-dark"><q>Full-Stack</q></strong> refers to the stack of multiple technologies that configures, compiles, and ultimatley serves up your application. Having the experience and knowledge of multiple languages, frameworks, <abbr title="Software Development Kit">SDKs</abbr> / <abbr title="Application Programming Interface">APIs</abbr>, and the latest coding standards &amp; best practices.
+                                                    <q>The term <strong class="text-dark">'Full-Stack'</strong> refers to the stack of multiple technologies that configures, 
+                                                    compiles, and ultimatley serves up your application. Having the experience and knowledge of multiple languages, frameworks, 
+                                                    <abbr title="Software Development Kit">SDKs</abbr> / <abbr title="Application Programming Interface">APIs</abbr>, and the 
+                                                    latest coding standards &amp; best practices.</q>
                                                 </p>
                                                 <p>
-                                                    This does NOT imply that a full-stack developer has mastered <i>everything</i> within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; it DOES imply however, that he or she has the skills 
-                                                    needed to weave in / out of each layer of the Stack comfortably with minimal assistance.
+                                                    <q>This does NOT imply that a full-stack developer has mastered <i>everything</i> within the overall <abbr title="Software Development Life Cycle">SDLC</abbr>; 
+                                                    it DOES imply however, that he or she has the skills needed to weave in / out of each layer of the Stack comfortably with minimal assistance.</q>
                                                 </p>
-                                                <p class="card-text text-right">
+                                                <p class="card-text text-right pr-2">
                                                     <small class="text-muted">September 2018 - <cite title="Coding Dojo"> codingdojo.com</cite></small>
                                                 </p>
                                             </div>
@@ -200,7 +198,7 @@
             </section>
     
             <!-- ## Section : Overview - Technologies  ## -->
-            <section class="section-overviews section-header section-down-arrow" data-background-color="white">
+            <section id="overview" class="section-overviews section-header section-down-arrow" data-background-color="white">
                 <div class="container-fluid">
                     <div id="overviews-wrapper" class="d-flex flex-column justify-content-md-center">
                         <div class="section-header-icon mx-auto text-info h2">
@@ -232,11 +230,11 @@
                                 <!-- ## Technologies ## -->
                                 <!-- TODO: Generate Card Component -->
                                 <div class="d-md-flex flex-md-row align-items-md-stretch justify-content-md-center card-technologies-group">
-                                    <div class="card card-technologies" data-background-color="info">
+                                    <div class="card card-technologies zoom" data-background-color="dark-grey">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
-                                                <h6 class="category">&nbsp;Coding / Structure / Testing</h6>
+                                                <h6 class="category">&nbsp;Coding / Layout / Testing</h6>
                                             </div>
                                             <div class="d-md-flex flex-md-column align-items-md-center justify-content-md-center py-3">
                                                 <fa-icon [inverse]="true" [icon]="['fas', 'laptop-code']" size="5x"></fa-icon>
@@ -248,19 +246,19 @@
                                             <ul>
                                                 <li>HTML5 / Markup</li>
                                                 <li>CSS3 / SaSS / SVG</li>
-                                                <li>JavaScript / ES2015+</li>
+                                                <li>JavaScript / Node / NPM</li>
                                                 <li>Angular / React / Vue</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-technologies" data-background-color="accent">
+                                    <div class="card card-technologies zoom" data-background-color="black">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
-                                                <h6 class="category">&nbsp;Strategy / Hardware / Coding</h6>
+                                                <h6 class="category">&nbsp;Coding / Hardware / Strategy</h6>
                                             </div>
                                             <div class="d-md-flex flex-md-column align-items-md-center justify-content-md-center py-3">
                                                 <fa-icon [inverse]="true" [icon]="['fas', 'server']" size="5x"></fa-icon>
@@ -270,43 +268,43 @@
                                                 <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                             <ul>
-                                                <li>HTML5 / CSS3</li>
-                                                <li>UnLimited Support</li>
-                                                <li>Unlimited Downloads</li>
-                                                <li>Full cloud access</li>
+                                                <li>Systems Configuration</li>
+                                                <li>Server-Side Scripts</li>
+                                                <li>API / SDK Development</li>
+                                                <li>Security / Web App Firewalls</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-technologies" data-background-color="info">
+                                    <div class="card card-technologies zoom" data-background-color="dark-grey">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
-                                                <h6 class="category">&nbsp;Strategy / Coding / Procedural</h6>
+                                                <h6 class="category">&nbsp;Data / Procedural / Strategy</h6>
                                             </div>
                                             <div class="d-md-flex flex-md-column align-items-md-center justify-content-md-center py-3">
                                                 <fa-icon [inverse]="true" [icon]="['fas', 'database']" size="5x"></fa-icon>
-                                                <h4 class="card-title text-uppercase font-weight-semi text-center">Data Modeling / Storage</h4>
+                                                <h4 class="card-title text-uppercase font-weight-semi text-center">Database / Storage</h4>
                                             </div>
                                             <div class="d-md-flex flex-md-row align-items-md-center justify-content-md-center">
                                                 <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                             <ul>
-                                                <li>HTML5 / CSS3</li>
-                                                <li>UnLimited Support</li>
-                                                <li>Unlimited Downloads</li>
-                                                <li>Full cloud access</li>
+                                                <li>DB Models / Schemas / SSMS</li>
+                                                <li>SQL / MySQL / PostgreSQL</li>
+                                                <li>DynamoDB / MongoDB Atlas</li>
+                                                <li>Cloud Services / AWS / GCP</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-technologies" data-background-color="accent">
+                                    <div class="card card-technologies zoom" data-background-color="black">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
                                                 <h6 class="category">&nbsp;Intergrate / Testing / Deploy</h6>
                                             </div>
@@ -318,45 +316,45 @@
                                                 <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                             <ul>
-                                                <li>HTML5 / CSS3</li>
-                                                <li>UnLimited Support</li>
-                                                <li>Unlimited Downloads</li>
-                                                <li>Full cloud access</li>
+                                                <li>Jenkins / Bamboo / Gradle</li>
+                                                <li>Git / GitHub</li>
+                                                <li>Docker / Kubernetes</li>
+                                                <li>E2E Tesing / Pipelines</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-technologies" data-background-color="info">
+                                    <div class="card card-technologies zoom" data-background-color="dark-grey">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
-                                                <h6 class="category">&nbsp;PRs / Code Reviews / Conflicts</h6>
+                                                <h6 class="category">&nbsp;Versioning / Documentation</h6>
                                             </div>
                                             <div class="d-md-flex flex-md-column align-items-md-center justify-content-md-center py-3">
                                                 <fa-icon [inverse]="true" [icon]="['fas', 'code-branch']" size="5x"></fa-icon>
-                                                <h4 class="card-title text-uppercase font-weight-semi text-center">Software Version Configuration</h4>
+                                                <h4 class="card-title text-uppercase font-weight-semi text-center">Version Control Systems</h4>
                                             </div>
                                             <div class="d-md-flex flex-md-row align-items-md-center justify-content-md-center">
                                                 <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                             <ul>
-                                                <li>HTML5 / CSS3</li>
-                                                <li>UnLimited Support</li>
-                                                <li>Unlimited Downloads</li>
-                                                <li>Full cloud access</li>
+                                                <li>Git / GitFlow / SVN / TFS</li>
+                                                <li>Pull Requests / Code Reviews</li>
+                                                <li>Branches / Merging / Conflicts</li>
+                                                <li>Changelogs / Documentation</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-technologies" data-background-color="accent">
+                                    <div class="card card-technologies zoom" data-background-color="black">
                                         <div class="card-body">
-                                            <div class="d-md-flex flex-md-row align-items-baseline justify-content-center pb-2">
+                                            <div class="d-md-flex flex-md-row align-items-md-baseline justify-content-md-center pb-2">
                                                 <fa-icon [icon]="['fas', 'toolbox']" [fixedWidth]="true" size="sm"></fa-icon>
-                                                <h6 class="category">&nbsp;Planning / Stategy / Client-Facing</h6>
+                                                <h6 class="category">&nbsp;Client Planning / Strategy</h6>
                                             </div>
                                             <div class="d-md-flex flex-md-column align-items-md-center justify-content-md-center py-3">
                                                 <fa-icon [inverse]="true" [icon]="['fas', 'tasks']" size="5x"></fa-icon>
@@ -366,14 +364,15 @@
                                                 <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
                                             <ul>
-                                                <li>Azure DevOps (VSTS)</li>
-                                                <li>Unlimited Downloads</li>
-                                                <li>Full cloud access</li>
-                                                <li>Full cloud access</li>
+                                                <li>Azure DevOps (VSTS) / JIRA</li>
+                                                <li>Agile / Scrum / Kanban</li>
+                                                <li>Sprint Planning / Task Creation</li>
+                                                <li>Story Updates / Sprint Retros</li>
                                             </ul>
                                             <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                <a class="btn btn-simple btn-round" href="#pablo"> More </a>
+                                                <fa-icon [icon]="['fas', 'layer-group']" [fixedWidth]="true" size="md"></fa-icon>
                                             </div>
+
                                         </div>
                                     
                                     </div>
@@ -391,9 +390,8 @@
             </section>
             
             <!-- ## Section : Overview - Pillars of Focus ## -->
-            <section class="section-technical-focus section-header section-down-arrow text-center border-top border-1 border-info" data-background-color="primary">
+            <section id="overview-focus" class="section-technical-focus section-header section-down-arrow text-center border-top border-1 border-info" data-background-color="primary">
                 <div class="section-header-image" style="background-image: url('assets/img/headers/projects-header.jpg');" filter-gradient="primary"></div>
-                <!-- <div class="section-technical-focus-image" style="background-image: url('assets/img/headers/projects-header.jpg');"></div> -->
                 <div class="container-fluid">
                     <div class="d-md-flex flex-md-column justify-content-md-center">
                         <div class="section-header-icon mx-auto text-primary h2">
@@ -426,11 +424,10 @@
                                             <div class="card-header geo-shape">
                                                 <!-- FIXME: Leverage SVG over CSS for all shapes -->
                                                 <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                                                        <circle cx="50" cy="50" r="40"/>
-                                                                    </svg> -->
+                                                    <circle cx="50" cy="50" r="40"/>
+                                                </svg> -->
                                                 <div class="geo-d4 mx-auto"></div>
-                                                <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']" transform="up-30">
-                                                </fa-icon>
+                                                <fa-icon class="stacked" [inverse]="true" [icon]="['fas', 'tachometer-alt']" transform="up-30"></fa-icon>
                                                 <h6 class="title card-title">Performance</h6>
                                             </div>
                                             <div class="card-body">
@@ -441,16 +438,11 @@
                                                 </p>
                                             </div>
                                             <div class="card-footer">
-                                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
-                                                </a>
+                                                <div class="badge badge-primary">Optimization</div>
+                                                <div class="badge badge-primary">Benchmarking</div>
+                                                <div class="badge badge-primary">A/B Testing</div>
+                                                <div class="badge badge-primary">Base64</div>
+                                                <div class="badge badge-primary">SVG</div>
 
                                             </div>
                                 
@@ -458,7 +450,7 @@
                                 
                                     </div>
                                     <!-- ## Overview 2 ## -->
-                                    <div class=" technical-focus-item">
+                                    <div class=" technical-focus-item toggle-card">
                                         <div class="card card-info">
                                             <div class="card-header geo-shape">
                                                 <div class="geo-d4-inverted mx-auto"></div>
@@ -474,23 +466,20 @@
                                                 </p>
                                             </div>
                                             <div class="card-footer">
-                                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                                <a href="#pablo" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#pablo" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#pablo" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
-                                                </a>
+                                                <div class="badge badge-accent">Mobile First</div>
+                                                <div class="badge badge-accent">Responsive</div>
+                                                <div class="badge badge-accent">Progressive</div>
+                                                <!-- <div class="badge badge-accent">UI/UX</div> -->
+                                                <div class="badge badge-accent">BS4</div>
+                                                <div class="badge badge-accent">Material Design</div>
+
                                             </div>
                                 
                                         </div>
                                 
                                     </div>
                                     <!-- ## Overview 3 ## -->
-                                    <div class=" technical-focus-item">
+                                    <div class=" technical-focus-item toggle-card">
                                         <div class="card card-info">
                                             <div class="card-header geo-shape">
                                                 <div class="geo-d4 mx-auto"></div>
@@ -506,16 +495,12 @@
                                                 </p>
                                             </div>
                                             <div class="card-footer">
-                                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-primary btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
-                                                </a>
+                                                <div class="badge badge-primary">UI/UX</div>
+                                                <div class="badge badge-primary">Usability</div>
+                                                <div class="badge badge-primary">Components</div>
+                                                <div class="badge badge-primary">Modular</div>
+                                                <div class="badge badge-primary">Scalable</div>
+                                            
                                 
                                             </div>
                                 
@@ -523,7 +508,7 @@
                                 
                                     </div>
                                     <!-- ## Overview 4 ## -->
-                                    <div class=" technical-focus-item">
+                                    <div class=" technical-focus-item toggle-card">
                                         <div class="card card-info">
                                             <div class="card-header geo-shape">
                                                 <div class="geo-d4-inverted mx-auto"></div>
@@ -539,16 +524,12 @@
                                                 </p>
                                             </div>
                                             <div class="card-footer">
-                                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                                <a href="#" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
-                                                </a>
-                                                <a href="#" class="btn btn-accent btn-icon btn-round">
-                                                    <fa-icon [icon]="['fab', 'linkedin-in']" size="lg"></fa-icon>
-                                                </a>
+                                                <div class="badge badge-accent">Clean Design</div>
+                                                <div class="badge badge-accent">CSS3 Transform</div>
+                                                <div class="badge badge-accent">Composite</div>
+                                                <div class="badge badge-accent">60fps</div>
+                                                <div class="badge badge-accent">SVG</div>
+                                            
                                             </div>
                                 
                                         </div>
@@ -566,12 +547,171 @@
                 </div>
     
             </section>
+
+            <!-- ## Section : About ## -->
+            <section id="about" class="section-about section-header section-down-arrow" data-background-color="dark-grey">
+                <!-- <div class="section-header-image" style="background-image: url('assets/svg/large-triangles.svg');" filter-gradient="green"></div> -->
+                <div class="container-fluid">
+                    <div class="d-md-flex flex-md-column align-items-md-center">
+                        <div class="section-header-icon mx-auto h2 text-green">
+                            <fa-layers [fixedWidth]="true">
+                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                <fa-icon [inverse]="true" [icon]="['fas', 'user-astronaut']" transform="grow-2"></fa-icon>
+                            </fa-layers>
+                        </div>
+                        <div class="d-md-flex flex-md-column justify-content-md-center">
+                            <article class="app-article-item">
+                                <div class="d-md-flex flex-md-column align-items-md-center">
+                                    <div class="text-uppercase section-title">
+                                        <h3>About: Who is this guy?</h3>
+                                    </div>
+            
+                                    <div class="col-md-8 separator"></div>
+            
+                                    <div class="col-md-8 mx-auto section-description py-5">
+                                        <div class="d-md-flex flex-md-row align-items-md-start justify-content-md-center">
+                                            <div class="col-md-3">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <img src="assets/img/headers/james-avatar.jpg" 
+                                                                 class="rounded img-fluid img-box-shadow"
+                                                                 alt="About James Singletary">
+                                                            <div class="app-icon-blink">
+                                                                <fa-icon class="light-primary" [icon]="['fas', 'angle-down']" size="lg"></fa-icon>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flip-card-back mt-1">
+                                                            <h3 class="lead text-uppercase font-weight-semi mb-3">James Singletary</h3>
+                                                            <p class="text-uppercase">A few of my favorite things:</p>
+                                                            <ul class="list-unstyled">
+                                                                <li>Family / Friends</li>
+                                                                <li>Technology</li>
+                                                                <li>Electronics</li>
+                                                                <li>Playing Guitar</li>
+                                                                <li>Comic Books</li>
+                                                                <li>Music / Records</li>
+                                                                <li>Video Games</li>
+                                                                <li>Fast Cars / Turbos</li>
+                                                                <li>Always Learning</li>
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-9 text-left font-weight-semi">
+                                                <p class="lead text-uppercase">
+                                                    A bit about myself?
+                                                </p>
+                                                <h5 class="description">
+                                                    Hello, my name is James and I'm a Full-Stack Developer with a focus that tends
+                                                    to lean towards the Front-End. I am
+                                                    located in Tampa, Florida and <i>yes</i>, it's forever HOT! I bring over 18
+                                                    years of professional experience in
+                                                    UI/UX Design &amp; Prototyping and over 15 years dedicatd to Application /
+                                                    Software Development.
+                                                </h5>
+                                                <h5 class="description">
+                                                    I consider Markup / JavaScript / UI Development to be my biggest strengths along
+                                                    with API Development &amp; intergration of data
+                                                    not far behind. I enjoy working with various JS &amp; styling frameworks,
+                                                    libraries, and node packages.
+                                                </h5>
+                                                <h5 class="description">
+                                                    That being said... I'm comfortable working with Databases both Relational &amp;
+                                                    Non-Relational - As well
+                                                    as various platforms for Continuous Intergration &amp; Delivery.
+                                                </h5>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                    </div>
+            
+                                </div>
+            
+                            </article>
+            
+                        </div>
+            
+                        <div class="col-md-8 separator"></div>
+            
+                        <div id="skills" class="d-md-flex flex-column align-items-md-center justify-content-md-center pt-5">
+                            <div class="text-uppercase section-title">
+                                <h3>Technical Summary / Skill Set:</h3>
+                            </div>
+                            <div class="col-md-8 mx-auto section-description">
+                                <h5 class="description">
+                                    To give you a better of idea of my technical background, the bar graph below lists various
+                                    languages, frameworks,
+                                    technologies, and methodologies. Reflecting my overall proficiencies and areas of strength.
+                                </h5>
+                            </div>
+                            <div class="col-md-8 mx-auto">
+                                <article class="skills pt-4">
+                                    <!-- TODO: Refactor section and add each value to the component model -->
+                                    <div class="skill">
+                                        <p>HTML5<span></span><span class="skills"></span><span>90%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>CSS3/Sass<span></span><span class="skills"></span><span>85%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>JavaScript<span></span><span class="skills"></span><span>80%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>Angular/CLI<span></span><span class="skills"></span><span>75%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>React/Redux<span></span><span class="skills"></span><span>55%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>Node/Python<span></span><span class="skills"></span><span>70%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>ADO.NET/Core<span></span><span class="skills"></span><span>50%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>Azure DevOps<span></span><span class="skills"></span><span>65%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>Git/GitHub<span></span><span class="skills"></span><span>85%</span></p>
+                                    </div>
+            
+                                    <div class="skill">
+                                        <p>Agile/Scrum<span></span><span class="skills"></span><span>80%</span></p>
+                                    </div>
+            
+                                </article>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+            </section>
             
             <!-- ## Section : Projects ## -->
-            <section class="section-projects section-header section-down-arrow" data-background-color="white">
+            <section id="projects" class="section-projects section-header section-down-arrow" data-background-color="smoke">
                 <!-- <div class="section-projects-image rellax-projects" data-rellax-speed="-5" data-rellax-percentage="0.5" style="background-image: url('assets/img/headers/sandbox-header.jpg');"></div> -->
                 <!-- <div class="section-projects-image" style="background-image: url('assets/img/headers/sandbox-header.jpg');"></div> -->
-
                 <div class="container-fluid">
                     <div class="d-md-flex flex-md-column align-items-md-center">
                         <div class="section-header-icon mx-auto h2 text-dark-grey">
@@ -634,43 +774,47 @@
                             </article>
                 
                         </div>
-                        <!-- <div class="d-md-flex flex-md-column align-items-md-start justify-content-md-center">
+
+                        <div class="d-md-flex flex-md-column align-items-md-start justify-content-md-center">
                             <article class="app-article-item">
-                                <div class="col-md-8 mx-auto text-center">
-                                    <blockquote class="blockquote blockquote-white">
-                                        <fa-layers [fixedWidth]="true">
-                                            <fa-icon [icon]="['fas', 'circle']" [classes]="['text-accent']" transform="grow-26 up-30">
-                                            </fa-icon>
-                                            <fa-icon [inverse]="true" [icon]="['fas', 'quote-right']" transform="grow-6 up-30">
-                                            </fa-icon>
-                                        </fa-layers>
-                                        <p>
-                                            <q>
-                                                                As a Full-Stack Developer, I can offer the experience and skills that are configureable to fit the requirements of any project!
-                                                            </q> 
-                                            <p>
-                                                                The idea of parsing &amp; displaying data on the front-end but then being able to switch gears to update the database as
-                                                                well as the API
-                                                            </p>
-                                            <q>
-                                                                I’m not a jack of all trades; I’m a master of <i>many</i>. I don’t feel there is anything I can’t do if I want to.
-                                                                <h6 class="category text-primary">- Evel Knievel</h6>
-                                                            </q>
-                                            <q>
-                                                As a Full-Stack Developer, I enjoy the variety of tasks that I'm able to work on. I
-                                                embrace the ability to shift my brain into a different gear - It's great! Also, being
-                                                able to make code changes on any layer is just awesome to say the least.
-                                            </q>
-                
-                                        </p>
-                
-                                    </blockquote>
-                
+                                <div class="d-md-flex text-uppercase section-title mx-auto align-items-md-center justify-content-md-center">
+                                    <h3>Mission Statement:</h3>
                                 </div>
-                
+                                <div class="col-md-8 mx-auto text-center">
+                                    <blockquote class="blockquote blockquote-accent">
+                                        <fa-layers [fixedWidth]="true">
+                                            <fa-icon [icon]="['fas', 'circle']" [classes]="['text-accent']" transform="grow-26 up-30"></fa-icon>
+                                            <fa-icon [inverse]="true" [icon]="['fas', 'quote-right']" transform="grow-6 up-30"></fa-icon>
+                                        </fa-layers>
+                                        <!-- <fa-icon [icon]="['fas', 'quote-right']" transform="grow-4"></fa-icon> -->
+                                        <p>
+                                            <!-- TODO: Create `.json` file to hold quotes  -->
+                                            <!-- <q>
+                                                    As a Full-Stack Developer, I can offer the experience and skills that are configureable to fit the requirements of any project!
+                                                </q> -->
+                                            <!-- <p>
+                                                    The idea of parsing &amp; displaying data on the front-end but then being able to switch gears to update the database as
+                                                    well as the API
+                                                </p> -->
+                                            <!-- <q>
+                                                    I’m not a jack of all trades; I’m a master of <i>many</i>. I don’t feel there is anything I can’t do if I want to.
+                                                </q> -->
+                                            <q>
+                                                To establish myself as a valuable asset by utilizing my experience &amp; skill set, thus allowing continued growth
+                                                personally and professionally. Help build clean &amp; creative concepts while continuing to learn new technologies and
+                                                methodologies that will allow me to achieve even greater goals. All the while, continuing to research &amp; discover new 
+                                                technologies that will keep me on the bleeding edge of forging concepts into creation.
+                                            </q>
+                        
+                                        </p>
+                        
+                                    </blockquote>
+                        
+                                </div>
+                        
                             </article>
-                
-                        </div> -->
+                        
+                        </div>
                 
                     </div>
                 
@@ -687,88 +831,15 @@
     
             </section>
     
-            <!-- ## Section : About ## -->
-            <section class="section-about section-header section-down-arrow" data-background-color="dark-grey">
-                <div class="container-fluid">
-                    <div class="d-md-flex flex-md-column align-items-md-center">
-                        <div class="section-header-icon mx-auto h2 text-green">
-                            <fa-layers [fixedWidth]="true">
-                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
-                                <fa-icon [inverse]="true" [icon]="['fas', 'user-astronaut']" transform="grow-2"></fa-icon>
-                            </fa-layers>
-                        </div>
-                        <div class="d-md-flex flex-md-column justify-content-md-center">
-                            <article class="app-article-item">
-                                <div class="d-md-flex flex-md-column align-items-md-center">
-                                    <div class="text-uppercase section-title">
-                                        <h3>About Me: Who is this guy?</h3>
-                                    </div>
-                                    <div class="col-md-8 mx-auto section-description">
-                                        <h5 class="description">
-                                            Hello, my name is James and I'm a Full-Stack Developer with a focus that tends to lean towards the Front-End Design &amp; 
-                                            Development arena. I am located in Tampa, Florida and <i>yes</i>, it is always hot! I have over 18 years of professional 
-                                            experience in UI/UX Design and over 15 years with Application / Software Development. I do consider Markup &amp; JavaScript 
-                                            to be my strongest areas of expertise along with API Development / Intergration. I enjoy working with various JS frameworks, 
-                                            libraries, and node packages. That being said, I'm comfortable working with Databases both Relational &amp; Non-Relational - 
-                                            As well as various methods involving Continuous Intergration and Delivery.
-                                        </h5>
-                                    </div>
-                                    <div class="d-md-flex flex-md-row align-items-md-center">
-                                        <div class="col-md-8 mx-auto">
-                                            <div class="card my-5" data-background-color="green">
-                                                <div class="card-header font-weight-semi">
-                                                    Please pardon the dust...
-                                                </div>
-                                                <div class="d-md-flex align-items-md-center justify-content-md-center">
-                                                    <div class="col-md-3 text-center">
-                                                        <fa-icon [icon]="['fas', 'tools']" [fixedWidth]="false" size="8x"></fa-icon>
-                                                    </div>
-                                                    <div class="col-md-9 pl-0">
-                                                        <div class="card-body">
-                                                            <p class="card-text lead">
-                                                                ...As updates are being made.
-                                                            </p>
-                                                            <p class="card-text">
-                                                                I decided to overhaul the main <q>Projects</q> Component of this section. I will
-                                                                be pushing
-                                                                updates as they become avaialable. If you would like more details regarding past
-                                                                / current projects,
-                                                                please feel free to reach out with any questions and / or requests.
-                                                            </p>
-                                                            <button type="button" class="btn btn-accent text-uppercase">Contact</button>
-                        
-                                                        </div>
-                        
-                                                    </div>
-                        
-                                                </div>
-                        
-                                            </div>
-                        
-                                        </div>
-                        
-                                    </div>
-                        
-                                </div>
-                        
-                            </article>
-                        
-                        </div>
-
-                    </div>
-    
-                </div>
-    
-            </section>
-    
         </div>
-    
+        
+        <!-- ## Footer ## -->
         <footer class="footer" data-background-color="black">
             <div class="container">
                 <nav>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link">
                                 Analysis
                             </a>
                         </li>
@@ -778,7 +849,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link">
                                 Contact
                             </a>
                         </li>
@@ -791,9 +862,9 @@
                 </nav>
                 <div class="copyright">
                     &copy;
-                    {{data | date: 'yyyy'}}, Designed with
-                    <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                    <a href="https://github.com/jsingletaryiv" target="_blank">James Singletary</a>.
+                    {{data | date: 'yyyy'}}, 
+                    <a href="https://github.com/jsingletaryiv" target="_blank">James Singletary IV</a>.
+                    Built with these great <a href="#">Technologies</a>.
                 </div>
     
             </div>

@@ -12,21 +12,27 @@ import { ProfileComponent } from './examples/profile/profile.component';
 import { OverviewComponent } from './examples/overview/overview.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'index', pathMatch: 'full' },
-    { path: 'index',                 component: OverviewComponent },
-    { path: 'nucleoicons',           component: NucleoiconsComponent },
-    { path: 'examples/landing',      component: LandingComponent },
-    { path: 'examples/login',        component: LoginComponent },
-    { path: 'examples/profile',      component: ProfileComponent },
-    { path: 'examples/overview',     component: OverviewComponent },
-    { path: 'examples/components',   component: ComponentsComponent }
+    { path: '', redirectTo: 'main', pathMatch: 'full' },
+    { path: 'main',                 component: OverviewComponent },
+    // { path: 'nucleoicons',           component: NucleoiconsComponent },
+    // { path: 'examples/landing',      component: LandingComponent },
+    // { path: 'examples/login',        component: LoginComponent },
+    // { path: 'examples/profile',      component: ProfileComponent },
+    // { path: 'examples/overview',     component: OverviewComponent },
+    // { path: 'examples/components',   component: ComponentsComponent }
 ];
 
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, {
+            useHash: true,
+            scrollPositionRestoration: 'enabled',
+            anchorScrolling: 'enabled',
+            onSameUrlNavigation: 'reload',
+            scrollOffset: [0, 60], // Needed for the sticky Navbar
+        })
     ],
     exports: [RouterModule]
 })

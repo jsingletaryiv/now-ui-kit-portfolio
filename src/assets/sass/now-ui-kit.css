@@ -2878,6 +2878,12 @@ textarea.form-control:focus, textarea.form-control:active {
   color: #FFFFFF;
 }
 
+.badge-accent, .badge-accent[href]:focus, .badge-accent[href]:hover {
+  border-color: #da1a90;
+  background-color: #da1a90;
+  color: #FFFFFF;
+}
+
 .badge-info, .badge-info[href]:focus, .badge-info[href]:hover {
   border-color: #2CA8FF;
   background-color: #2CA8FF;
@@ -4988,7 +4994,7 @@ ngb-carousel .carousel-control-next-icon {
 }
 
 .card-info .card-body {
-  padding: 1rem .5rem;
+  padding: 1rem 1rem 0;
   min-height: 225px;
 }
 

@@ -7,12 +7,216 @@ section.section-welcome article.app-article-item:nth-child(1), .section.section-
 }
 
 section.section-welcome article.app-article-item:nth-child(1) > div.app-div-item:nth-child(1), .section.section-welcome article.app-article-item:nth-child(1) > div.app-div-item:nth-child(1) {
+  padding-top: 1rem;
   text-align: end;
 }
 
 section.section-welcome article.app-article-item:nth-child(2) > div.app-div-item, .section.section-welcome article.app-article-item:nth-child(2) > div.app-div-item {
-  padding-top: 0;
+  padding-top: 1rem;
   width: 100%;
+}
+
+section.section-about, .section.section-about {
+  /* The flip card container */
+  /* This container is needed to position the front and back side */
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
+}
+
+section.section-about .flip-card, .section.section-about .flip-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  border: none;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+section.section-about .flip-card-inner, .section.section-about .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+section.section-about .flip-card:hover .flip-card-inner, .section.section-about .flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+section.section-about .flip-card-front, section.section-about .flip-card-back, .section.section-about .flip-card-front, .section.section-about .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+section.section-about .flip-card-front, .section.section-about .flip-card-front {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+section.section-about .flip-card-back, .section.section-about .flip-card-back {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+section.section-about div#skills, .section.section-about div#skills {
+  background: none;
+}
+
+section.section-about div#skills article.skills, .section.section-about div#skills article.skills {
+  width: 100%;
+  height: auto;
+}
+
+section.section-about div#skills article.skills .skill, .section.section-about div#skills article.skills .skill {
+  font-weight: 500;
+}
+
+section.section-about div#skills article.skills p, .section.section-about div#skills article.skills p {
+  z-index: 2;
+  color: #151515;
+  padding: 5px 10px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+section.section-about div#skills article.skills div span:nth-child(1), .section.section-about div#skills article.skills div span:nth-child(1) {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+section.section-about div#skills article.skills div span:nth-child(2), .section.section-about div#skills article.skills div span:nth-child(2) {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #23cd19;
+  height: 100%;
+  -webkit-box-shadow: inset 1px -5px 15px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: inset 1px -5px 15px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 1px -5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section.section-about div#skills article.skills div span:nth-child(3), .section.section-about div#skills article.skills div span:nth-child(3) {
+  position: absolute;
+  right: .5rem;
+  color: white;
+}
+
+section.section-about div#skills article.skills div:nth-child(1) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(1) span:nth-child(2) {
+  width: 90%;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+section.section-about div#skills article.skills div:nth-child(2) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(2) span:nth-child(2) {
+  width: 85%;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+section.section-about div#skills article.skills div:nth-child(3) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(3) span:nth-child(2) {
+  width: 80%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+section.section-about div#skills article.skills div:nth-child(4) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(4) span:nth-child(2) {
+  width: 75%;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+section.section-about div#skills article.skills div:nth-child(5) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(5) span:nth-child(2) {
+  width: 50%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+section.section-about div#skills article.skills div:nth-child(6) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(6) span:nth-child(2) {
+  width: 70%;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+section.section-about div#skills article.skills div:nth-child(7) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(7) span:nth-child(2) {
+  width: 55%;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+section.section-about div#skills article.skills div:nth-child(8) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(8) span:nth-child(2) {
+  width: 65%;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+section.section-about div#skills article.skills div:nth-child(9) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(9) span:nth-child(2) {
+  width: 85%;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+section.section-about div#skills article.skills div:nth-child(10) span:nth-child(2), .section.section-about div#skills article.skills div:nth-child(10) span:nth-child(2) {
+  width: 80%;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+section.section-about .skills, .section.section-about .skills {
+  -webkit-animation: skills 1s cubic-bezier(0.17, 0.67, 0, 1);
+          animation: skills 1s cubic-bezier(0.17, 0.67, 0, 1);
+}
+
+@-webkit-keyframes skills {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes skills {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
 }
 
 .text-shadow-sm {

@@ -5,12 +5,17 @@
 // ## Options are located in Bootstrap `_variables`partial ## //
 
 // ## Variable Overrides ## //
+$info-color: rgb(44, 168, 255);
 $text-dark-grey: rgb(53, 53, 53);
 $text-light: rgb(248, 249, 250);
 $text-green: rgb(35, 205, 25);
 
 // ## App / Layout Overrides ## //
 .overview-page {
+
+    // ## Smooth Scrolling ## //
+    // scroll-behavior: smooth;
+    
     .page-header {
         .logo-main {
             font-size: 1.5rem;
@@ -32,6 +37,40 @@ $text-green: rgb(35, 205, 25);
 
 .border-accent {
     border-color: $accent-color !important;
+}
+
+.blockquote{
+    border-left: none;
+    border: 1px solid $default-color;
+    padding: 20px;
+    font-size: $font-size-blockquote;
+    line-height: 1.8;
+
+    small{
+        color: $default-color;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+    }
+
+    &.blockquote-green{
+        border-color: $text-green;
+        color: $text-green;
+
+        small{
+            color: $text-light;
+        }
+    }
+}
+
+.separator{
+    height: 1px;
+    width: 100%;
+    background-color: rgba($default-color, .3);
+    margin: 20px auto;
+
+    &.separator-green{
+        background-color: rgba($text-green, .3);
+    }
 }
 
 // ## Typography Class / Overrides ## //
@@ -80,6 +119,18 @@ $text-green: rgb(35, 205, 25);
     &.card-technologies {
         // text-align: center;
         position: relative;
+
+        &.zoom {
+            // Animation type / length
+            transition: transform .2s;
+            pointer-events: auto;
+        }
+
+        &.zoom:hover {
+            background-color: $info-color;
+            transform: scale(1.05);
+            will-change: transform;
+        }
 
         li {
             border-bottom-color: rgba(255, 255, 255, .3);
@@ -145,7 +196,7 @@ section, .section {
             position: absolute;
             background-size: cover;
             background-position: center 780px;
-            width: 100vw;
+            width: 100%;
             height: 650px;
             z-index: 0;
 
@@ -230,6 +281,11 @@ section, .section {
 // ## Section - Welcome ## //
 .section-welcome {
     // position: relative;
+
+    article { 
+        padding-bottom: 0; 
+    }
+
     &.section-down-arrow:after {
         left: auto;
         right: 5%;
@@ -266,7 +322,7 @@ section, .section {
             position: absolute;
             background-size: cover;
             background-position: center -2vh;
-            width: 100vw;
+            width: 100%;
             height: 100%;
             z-index: 0;
 
@@ -324,7 +380,7 @@ section, .section {
             position: absolute;
             background-size: cover;
             background-position: center -15vh;
-            width: 100vw;
+            width: 100%;
             height: 90%;
             z-index: 0;
 
@@ -363,16 +419,15 @@ section, .section {
         .technical-focus-item {
             padding: 1rem;
 
-            // &.toggle-card {
-            //     pointer-events: auto;
-            //     transition: all $general-transition-time ease-in;
-            // }
+            &.toggle-card {
+                pointer-events: auto;
+                transition: all .2s ease-in;
+            }
 
-            // &.taggle-card:hover {
-            //     -webkit-transform: translateY(-4vh);
-            //     transform: translateY(-4vh);  
-            //     will-change: transform;
-            // }
+            &.toggle-card:hover {
+                transform: translateY(-2vh);  
+                will-change: transform;
+            }
 
             .card {
                 &.card-info {
@@ -439,6 +494,70 @@ section, .section {
     }
 }
 
+// ## Section - About ## //
+.section-about {
+    height: 100%;
+    width: 100vw;
+
+    padding: 0 0 5rem 0;
+
+    &.section-header {
+        // ## Header Image ## //
+        .section-header-image {
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        // ## Header Icon ## //
+        .section-header-icon {
+            padding: 6rem 0 2rem 0;
+        }
+    }
+
+    article {
+        padding-bottom: 0;
+    }
+
+    .section-description {
+        text-align: center;
+
+        h5.description {
+            width: 100%;
+            margin: 1rem auto 2rem;
+            color: $text-green;
+            font-weight: $font-weight-light;
+            font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    &.section-down-arrow:after {
+        left: auto;
+        right: 6%;
+        bottom: -60px;
+        content: '';
+        position: absolute;
+        border-top: $text-dark-grey 60px solid;
+        border-left: transparent 60px solid;
+        border-right: transparent 60px solid;
+        z-index: 2;
+    }
+
+    [filter-color="primary"]{
+        background-image: linear-gradient-deg(-35deg, rgba($black-color,.1), rgba(6, 106, 238, .3));
+    }
+
+    [data-background-color="dark-grey"] {
+        background-color: $text-dark-grey;
+        color: $text-green;
+    }
+}
+
 // ## Section - Projects ## //
 .section-projects {
     height: 100%;
@@ -452,7 +571,7 @@ section, .section {
             position: absolute;
             background-size: cover;
             background-position: center center;
-            width: 100vw;
+            width: 100%;
             height: 100%;
             z-index: 0;
 
@@ -475,82 +594,15 @@ section, .section {
     }
 
     &.section-down-arrow:after {
-        left: auto;
-        right: 6%;
+        left: 6%;
+        right: auto;
         bottom: -60px;
         content: '';
         position: absolute;
-        border-top: $white-bg 60px solid;
+        border-top: $smoke-bg 60px solid;
         border-left: transparent 60px solid;
         border-right: transparent 60px solid;
         z-index: 2;
-    }
-}
-
-// ## Section - About ## //
-.section-about {
-    height: 100%;
-    width: 100vw;
-
-    padding: 0 0 5rem 0;
-
-    &.section-header {
-        // ## Header Image ## //
-        .section-header-image {
-            position: absolute;
-            background-size: cover;
-            background-position: center center;
-            width: 100vw;
-            height: 100%;
-            z-index: 0;
-
-            // mask-image: linear-gradient(black, white, transparent);
-            // -webkit-mask-image: linear-gradient(black, white, transparent);
-        }
-
-        // ## Header Icon ## //
-        .section-header-icon {
-            padding: 6rem 0 2rem 0;
-        }
-    }
-
-    article {
-        padding-bottom: 2rem;
-    }
-
-    .section-description {
-        text-align: center;
-
-        h5.description {
-            width: 100%;
-            margin: 1rem auto 2rem;
-            color: $text-light;
-            font-weight: $font-weight-light;
-            font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-        }
-    }
-
-    &.section-down-arrow:after {
-        left: auto;
-        right: 6%;
-        bottom: -60px;
-        content: '';
-        position: absolute;
-        border-top: $white-bg 60px solid;
-        border-left: transparent 60px solid;
-        border-right: transparent 60px solid;
-        z-index: 2;
-    }
-
-    [filter-color="primary"]{
-        background-image: linear-gradient-deg(-35deg, rgba($black-color,.1), rgba(6, 106, 238, .3));
-    }
-
-    [data-background-color="dark-grey"] {
-        background-color: $text-dark-grey;
-        color: $text-green;
     }
 }
 
@@ -682,6 +734,17 @@ section, .section {
     color: $text-light;
 }
 
+[data-background-color="black"] {
+    background-color: $black-bg;
+    color: $text-light;
+}
+
+footer {
+    .copyright { 
+        line-height: 2rem;
+    }
+}
+
 // TODO: Make these extensible by creating _partial files for each animation // 
 // ## Animations ## //
 // Blinking Icon Set
@@ -809,6 +872,14 @@ section, .section {
     }
 }
 
+.saturate-150 {
+    filter: saturate(150%);
+}
+
+.img-box-shadow {
+    box-shadow: $box-shadow-raised;
+}
+
 [filter-gradient="primary"] {
     -webkit-mask-image: linear-gradient($black-color, $primary-color, transparent);
     mask-image: linear-gradient($black-color, $primary-color, transparent);
@@ -822,6 +893,11 @@ section, .section {
 [filter-gradient="info"] {
     -webkit-mask-image: linear-gradient($black-color, $info-color, transparent);
     mask-image: linear-gradient($black-color, $info-color, transparent);
+}
+
+[filter-gradient="green"] {
+    -webkit-mask-image: linear-gradient($black-color, $text-green, transparent);
+    mask-image: linear-gradient($black-color, $text-green, transparent);
 }
 
 // ## Bootstrap Extended ## //
