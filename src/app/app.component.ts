@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 
                 // console.log(evt + ' Event : ', number);
 
-                if (number > 350 || window.pageYOffset > 350) {
+                if (number > 650 || window.pageYOffset > 650) {
                     navbar.classList.remove('navbar-transparent');
                     // navbarLogo.classList.remove('app-navbar-fade-out');
                     navbarLogo.classList.add('app-navbar-fade-in');

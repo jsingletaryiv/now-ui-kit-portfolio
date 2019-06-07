@@ -1,39 +1,51 @@
-.card{
+.card {
     border: 0;
     border-radius: $border-radius-small;
-    display: inline-block;
+    display: block;
     position: relative;
     overflow: hidden;
     width: 100%;
     margin-bottom: 20px;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 
-    .card-body{
-        min-height: 190px;
+    .card-body {
+        min-height: 200px;
     }
 
-    // TODO: Use sass var names as `data-background-color` values
-    // ## primary ## //
-    &[data-background-color="orange"]{
+    // ## Background Colors ## //
+    &[data-background-color="primary"] {
         background-color: $primary-color;
     }
-    // ## danger ## //
-    &[data-background-color="red"]{
+
+    &[data-background-color="accent"] {
+        background-color: $accent-color;
+    }
+
+    &[data-background-color="danger"] {
         background-color: $danger-color;
     }
-    // ## warning ## //
-    &[data-background-color="yellow"]{
+
+    &[data-background-color="content: '\e879';"] {
         background-color: $warning-color;
     }
-    // ## blue ## //
-    &[data-background-color="blue"]{
+
+    &[data-background-color="info"] {
         background-color: $info-color;
     }
-    // ## green ## //
-    &[data-background-color="green"]{
+
+    &[data-background-color="success"] {
         background-color: $success-color;
     }
-    // ## font color ## //
+
+    &[data-background-color="black"]{
+        background-color: $black-bg;
+    }
+
+    &[data-background-color="white"]{
+        background-color: $white-bg;
+    }
+
+    // ## Font Color ## //
     &[data-background-color]:not([data-background-color="gray"]) {
         color: #fff;
     }
@@ -61,57 +73,69 @@
         margin-right: 20px;
         padding: 5px 0;
     }
+
     .card-header {
         padding: 0.75rem 1.25rem;
         margin-bottom: 0;
         // background-color: $white-bg;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
-    .card-title{
+
+    .card-title {
         margin-bottom: 0;
         margin-top: 1rem;
         font-size: $font-size-large;
         font-weight: $font-weight-semi;
     }
-    .card-body{
-        padding: 1rem 1rem .4rem;
-        min-height: 100%;
-    }    
+
+    .card-body {
+        padding: 1rem 1rem 0;
+        min-height: 225px;
+    }  
+
     .header-text-divider {
         height: 0;
         margin: 0.5rem 0;
         overflow: hidden;
         border-top: 1px solid #e9ecef;
     }
-    .text-divider{
+
+    .text-divider {
         margin-top: 15px;
         margin-bottom: 15px;
         text-align: center;
     }
-    .checkbox{
+
+    .full-stack-img {
+        position: relative;
+        // -webkit-filter: hue-rotate(90deg);
+        // filter: hue-rotate(90deg);
+    }
+
+    .checkbox {
         margin-top: 20px;
 
-        label{
+        label {
             margin-left: 17px;
         }
-        .checkbox-material{
+        .checkbox-material {
             padding-right: 12px;
         }
     }
 
-    .social-line{
+    .social-line {
         margin-top: 20px;
         text-align: center;
 
         .btn.btn-icon,
-        .btn.btn-icon .btn-icon -mini{
+        .btn.btn-icon .btn-icon -mini {
             margin-left: 5px;
             margin-right: 5px;
             box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2);
         }
     }
 
-    .footer{
+    .footer {
         margin-bottom: 10px;
         margin-top: 24px;
     }
@@ -149,6 +173,7 @@
     }
 }
 
+// ## Pending Deletion ## //
 .card-signup {
     max-width: 350px;
     margin: 0 auto;
@@ -204,6 +229,7 @@
     }
 }
 
+// ## Pending Deletion ## //
 .card-plain {
     background: transparent;
     box-shadow: none;
@@ -220,11 +246,12 @@
 }
 
 .card-technologies {
+    margin: 0 .75rem;
+
     ul {
         list-style: none;
         padding: 0;
-        max-width: 240px;
-        margin: 10px auto;
+        // margin: 5px auto;
 
         > li {
             // color: #fff;
@@ -234,12 +261,16 @@
         }
     }
 
+    .card-body {
+        padding: 1rem;
+    }
+
     .icon {
         padding: 10px 0 0;
     }
 }
 
-.card-testimonial{
+.card-testimonial {
     border: 0;
     border-radius: 0;
     position: relative;

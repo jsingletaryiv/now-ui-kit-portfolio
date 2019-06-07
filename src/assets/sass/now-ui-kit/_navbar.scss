@@ -19,6 +19,12 @@
         line-height: 21px;
     }
 
+    .navbar-brand {
+        .navbar-brand-icon {
+            font-size: $font-size-base;
+        }
+    }
+
     .navbar-nav{
         &.navbar-logo{
             position: absolute;

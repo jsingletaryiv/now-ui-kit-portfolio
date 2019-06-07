@@ -145,6 +145,24 @@ p{
         }
     }
 
+    &.blockquote-accent{
+        border-color: $accent-color;
+        color: $accent-color;
+
+        small{
+            color: $accent-color;
+        }
+    }
+
+    &.blockquote-info{
+        border-color: $info-color;
+        color: $info-color;
+
+        small{
+            color: $info-color;
+        }
+    }
+
     &.blockquote-danger{
         border-color: $danger-color;
         color: $danger-color;

@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
+    navbarTitle = 'JamesSingletaryIV';
+
     constructor(public location: Location, private element: ElementRef) {
         this.sidebarVisible = false;
     }
