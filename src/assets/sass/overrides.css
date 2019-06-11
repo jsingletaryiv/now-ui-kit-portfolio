@@ -410,7 +410,7 @@ section[data-background-color="black"], .section[data-background-color="black"] 
 
 .section-about {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 0 0 5rem 0;
 }
 
@@ -439,7 +439,7 @@ section[data-background-color="black"], .section[data-background-color="black"] 
   width: 100%;
   margin: 1rem auto 2rem;
   color: #23cd19;
-  font-weight: 300;
+  font-weight: 500;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

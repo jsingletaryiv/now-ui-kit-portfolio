@@ -18,8 +18,8 @@ const routes: Routes = [
     // { path: 'examples/landing',      component: LandingComponent },
     // { path: 'examples/login',        component: LoginComponent },
     // { path: 'examples/profile',      component: ProfileComponent },
-    // { path: 'examples/overview',     component: OverviewComponent },
-    // { path: 'examples/components',   component: ComponentsComponent }
+    { path: 'examples/overview',     component: OverviewComponent },
+    { path: 'examples/components',   component: ComponentsComponent }
 ];
 
 @NgModule({
