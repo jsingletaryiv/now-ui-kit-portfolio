@@ -1,18 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="500" role="navigation">
     <div class="container">
         <div class="navbar-translate">
-            <a id="appNavbarLogo" class="app-navbar-logo">
-                <div>
-                    <div class="navbar-brand">
-                        <!-- <fa-icon [icon]="['fas', 'terminal']" size="xs"></fa-icon> -->
-                        <!-- <i class="n-logo mdi mdi-meteor"></i> -->
-                        <span class="navbar-brand-icon">
-                            <fa-icon class="logo-main pr-2" [icon]="['fab', 'js-square']" transform="grow-12"></fa-icon>
-                        </span>               
-                        <span class="text-lowercase"> {{ navbarTitle | lowercase }} </span>
-                    </div>
+            <a id="appNavbarLogo" class="app-navbar-logo" pageScroll routerLink="/app" [pageScrollTarget]="'.wrapper'">
+                <div class="navbar-brand">
+                    <!-- <fa-icon [icon]="['fas', 'terminal']" size="xs"></fa-icon> -->
+                    <!-- <i class="n-logo mdi mdi-meteor"></i> -->
+                    <span class="navbar-brand-icon">
+                        <fa-icon class="logo-main pr-2" [icon]="['fab', 'js-square']" transform="grow-12"></fa-icon>
+                    </span>
+                    <span class="text-lowercase"> {{ navbarTitle | lowercase }} </span>
 
-                </div> 
+                </div>
 
             </a>
             <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarToggler" 
@@ -28,22 +26,22 @@
         <div class="collapse navbar-collapse" data-color="primary">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" pageScroll [pageScrollOffset]="60" href="#welcome">
+                    <a class="nav-link" pageScroll [pageScrollOffset]="60" routerLink="/app" routerLinkActive="active" href="#welcome">
                         <p>Welcome</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" pageScroll href="#define">
+                    <a class="nav-link" pageScroll routerLink="/app" routerLinkActive="active" href="#define">
                         <p>Full-Stack</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" pageScroll href="#overview">
+                    <a class="nav-link" pageScroll routerLink="/app" routerLinkActive="active" href="#overview">
                         <p>Overview</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" pageScroll href="#projects">
+                    <a class="nav-link" pageScroll routerLink="/app" routerLinkActive="active" href="#projects">
                         <p>Projects</p>
                     </a>  
                 </li>
