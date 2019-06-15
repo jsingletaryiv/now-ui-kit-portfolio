@@ -12,14 +12,15 @@ import { ProfileComponent } from './examples/profile/profile.component';
 import { OverviewComponent } from './examples/overview/overview.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'main', pathMatch: 'full' },
-    { path: 'main',                 component: OverviewComponent },
+    { path: '', redirectTo: 'app', pathMatch: 'full' },
+    { path: 'app',                      component: OverviewComponent },
     // { path: 'nucleoicons',           component: NucleoiconsComponent },
     // { path: 'examples/landing',      component: LandingComponent },
     // { path: 'examples/login',        component: LoginComponent },
     // { path: 'examples/profile',      component: ProfileComponent },
-    { path: 'examples/overview',     component: OverviewComponent },
-    { path: 'examples/components',   component: ComponentsComponent }
+    // { path: 'examples/overview',     component: OverviewComponent },
+    // { path: 'examples/components',   component: ComponentsComponent },
+    { path: '**',                       component: OverviewComponent }
 ];
 
 @NgModule({
@@ -28,10 +29,10 @@ const routes: Routes = [
         BrowserModule,
         RouterModule.forRoot(routes, {
             useHash: true,
-            scrollPositionRestoration: 'enabled',
-            anchorScrolling: 'enabled',
-            onSameUrlNavigation: 'reload',
-            scrollOffset: [0, 60], // Needed for the sticky Navbar
+            // scrollPositionRestoration: 'enabled',
+            // anchorScrolling: 'enabled',
+            // onSameUrlNavigation: 'reload',
+            // scrollOffset: [0, 60], // Needed for the sticky Navbar
         })
     ],
     exports: [RouterModule]

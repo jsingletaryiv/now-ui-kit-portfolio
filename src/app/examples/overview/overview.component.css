@@ -271,6 +271,31 @@ section.section-about .skills, .section.section-about .skills {
   }
 }
 
+#backToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 2rem;
+  /* Place the button at the bottom of the page */
+  right: 2rem;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  color: white;
+  /* Text color */
+  padding: 15px;
+  /* Some padding */
+  font-size: 1rem;
+  /* Increase font size */
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top-btn {
+  display: block;
+}
+
 .text-shadow-sm {
   text-shadow: 1px 1px 1px #212121;
 }

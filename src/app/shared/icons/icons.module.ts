@@ -9,6 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faAddressCard,
   faAngleDoubleDown,
+  faAngleDoubleUp,
   faAngleDown,
   faAt,
   faAward,
@@ -165,6 +166,7 @@ export class IconsModule {
         library.add(
           faAddressCard,
           faAngleDoubleDown,
+          faAngleDoubleUp,
           faAngleDown,
           faAt,
           faAward,

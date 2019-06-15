@@ -68,7 +68,7 @@ export class OverviewComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        // ## Init Rellax Elements ## \\
+        // ## Init Rellax Elements ## //
         const rellaxHeader = new Rellax('.rellax-header');
         // const rellaxQuotes = new Rellax('.rellax-quotes');
 
