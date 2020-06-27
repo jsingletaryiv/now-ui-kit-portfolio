@@ -37,7 +37,7 @@ export class OverviewComponent implements OnInit, OnDestroy {
 
     // Landing Page
     landingPageTitle = 'James Singletary IV';
-    landingPageSubTitle = 'Full-Stack Application / UI Developer';
+    landingPageSubTitle = '"Full-Stack" Application / UI Developer';
     // pageSubTitle = 'Since MCMXCVIII';
 
     // TODO: Add section titles as needed //
