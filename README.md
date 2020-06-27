@@ -1,35 +1,20 @@
-# [Now UI Kit Angular](https://creativetimofficial.github.io/now-ui-kit-angular/index) [![version][version-badge]][CHANGELOG]
+# Online Portfolio / Presence
 
-![alt text](https://s3.amazonaws.com/creativetim_bucket/products/77/original/opt_nuk_angular_thumbnail.jpg? "Now UI Kit Angular")
+The latest and most detailed version of my online portfolio...
 
+> As with any labor of love, it's still a work in progress. My apologies for any content that is missing or out of date.
+
+**Built with Angular and Now UI Kit:**
 
 **[Now UI Kit Angular](https://creativetimofficial.github.io/now-ui-kit-angular/index)** is a responsive Bootstrap 4 kit provided for free by Invision and Creative Tim. It is a beautiful cross-platform UI kit featuring over 50 elements and 3 templates.
 
-Now UI Kit is one of the most popular UI Kits online, provided in PSD and Sketch formats by Invision. We wanted to find a way for developers worldwide to benefit from using it. So, in collaboration with Invision, we are launching the HTML version for it!
+## Software Stack
 
-Now will help you create a clean and simple website that is a perfect fit for today's flat design. It is built using the 12 column grid system, with components designed to fit together perfectly. It makes use of bold colours, beautiful typography, clear photography and spacious arrangements.
+**Bootstrap 4 Support** - Now UI Kit is built on top of the much awaited Bootstrap 4. This makes starting a new project very simple. It also provides benefits if you are already working on a Bootstrap 4 project; you can just import the Now UI Kit style over it. Most of the elements have been redesigned; but if you are using an element we have not touched, it will fall back to the Bootstrap default.
 
-Create awesome, lifelike prototypes with InVision and Now so your users can experience and give feedback on your vision!
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
-To get the PSD and Sketch files, please visit Invision (https://www.invisionapp.com/now).
-
-
-**Bootstrap 4 Support**
-Now UI Kit is built on top of the much awaited Bootstrap 4. This makes starting a new project very simple. It also provides benefits if you are already working on a Bootstrap 4 project; you can just import the Now UI Kit style over it. Most of the elements have been redesigned; but if you are using an element we have not touched, it will fall back to the Bootstrap default.
-
-**Example Pages**
-We wanted to fully display the power of this kit, so the kit comes packed with examples showing you how to use the components. Inside the product you will find:
-
-## Links:
-
-+ [Live Preview](https://creativetimofficial.github.io/now-ui-kit-angular/index)
-+ [Landing Page](https://creativetimofficial.github.io/now-ui-kit-angular/examples/landing)
-+ [Login Page](https://creativetimofficial.github.io/now-ui-kit-angular/examples/login)
-+ [Profile Page](https://creativetimofficial.github.io/now-ui-kit-angular/examples/profile)
-+ [Now UI Kit PRO Angular](https://creativetimofficial.github.io/now-ui-kit-pro-angular/presentation) (from $79)
-
-
-## Terminal Commands
+### Up and Running
 
 1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
 2. Open Terminal
@@ -38,7 +23,32 @@ We wanted to fully display the power of this kit, so the kit comes packed with e
 5. Then: ```npm install```
 6. And: ```npm start```
 7. Navigate to [localhost:4200](localhost:4200)
-### What's included
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### File Structure
 
 Within the download you'll find the following directories and files:
 
@@ -150,24 +160,6 @@ Now Ui Kit Angular
 ## Useful Links
 
 More products from Creative Tim: <http://www.creative-tim.com/bootstrap-themes>
-
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
-
-Freebies: <http://www.creative-tim.com/products>
-
-Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
-
-Social Media:
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
 
 [CHANGELOG]: ./CHANGELOG.md
 [version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
