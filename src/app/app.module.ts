@@ -1,10 +1,14 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app.routing';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 
@@ -23,6 +27,13 @@ import { ExamplesModule } from './examples/examples.module';
         NgbModule.forRoot(),
         IconsModule,
         FormsModule,
+        NgxPageScrollCoreModule.forRoot({
+            _logLevel: 1,
+            duration: 1000,
+            scrollOffset: 64,
+            interruptible: false
+        }),
+        NgxPageScrollModule,
         RouterModule,
         AppRoutingModule,
         ComponentsModule,

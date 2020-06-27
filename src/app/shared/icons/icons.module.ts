@@ -8,6 +8,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // Import Base / Solid Icons
 import {
   faAddressCard,
+  faAngleDoubleDown,
+  faAngleDoubleUp,
   faAngleDown,
   faAt,
   faAward,
@@ -163,6 +165,8 @@ export class IconsModule {
         // Sanity Check:: Icons are listed in alphabetical order
         library.add(
           faAddressCard,
+          faAngleDoubleDown,
+          faAngleDoubleUp,
           faAngleDown,
           faAt,
           faAward,

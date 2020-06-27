@@ -26,7 +26,7 @@ section.section-about, .section.section-about {
 }
 
 section.section-about .flip-card, .section.section-about .flip-card {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: black;
   width: 100%;
   height: 100%;
   border: none;
@@ -46,7 +46,7 @@ section.section-about .flip-card-inner, .section.section-about .flip-card-inner 
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: black;
 }
 
 section.section-about .flip-card:hover .flip-card-inner, .section.section-about .flip-card:hover .flip-card-inner {
@@ -60,6 +60,7 @@ section.section-about .flip-card-front, section.section-about .flip-card-back, .
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  background-color: black;
 }
 
 section.section-about .flip-card-front, .section.section-about .flip-card-front {
@@ -68,10 +69,61 @@ section.section-about .flip-card-front, .section.section-about .flip-card-front 
 }
 
 section.section-about .flip-card-back, .section.section-about .flip-card-back {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: #f8f9fa;
+  margin-top: .1rem;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+section.section-about .flip-card-back .img-container, .section.section-about .flip-card-back .img-container {
+  width: 5rem;
+  height: 5rem;
+}
+
+section.section-about .flip-card-back .img-container img, .section.section-about .flip-card-back .img-container img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+section.section-about .flip-card-back ul li, .section.section-about .flip-card-back ul li {
+  padding-bottom: .5rem;
+}
+
+section.section-about .card-fade .card-fade-img, .section.section-about .card-fade .card-fade-img {
+  width: 100%;
+  height: auto;
+}
+
+section.section-about .card-fade .card-fade-overlay, .section.section-about .card-fade .card-fade-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+section.section-about .card-fade .card-fade:hover .card-fade-overlay, .section.section-about .card-fade .card-fade:hover .card-fade-overlay {
+  opacity: 1;
+}
+
+section.section-about .card-fade .card-body, .section.section-about .card-fade .card-body {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 section.section-about div#skills, .section.section-about div#skills {
@@ -217,6 +269,31 @@ section.section-about .skills, .section.section-about .skills {
     left: 0;
     opacity: 1;
   }
+}
+
+#backToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 2rem;
+  /* Place the button at the bottom of the page */
+  right: 2rem;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  color: white;
+  /* Text color */
+  padding: 15px;
+  /* Some padding */
+  font-size: 1rem;
+  /* Increase font size */
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top-btn {
+  display: block;
 }
 
 .text-shadow-sm {

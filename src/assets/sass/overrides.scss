@@ -497,7 +497,7 @@ section, .section {
 // ## Section - About ## //
 .section-about {
     height: 100%;
-    width: 100vw;
+    width: 100%;
 
     padding: 0 0 5rem 0;
 
@@ -529,7 +529,7 @@ section, .section {
             width: 100%;
             margin: 1rem auto 2rem;
             color: $text-green;
-            font-weight: $font-weight-light;
+            font-weight: $font-weight-semi;
             font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;

@@ -1,10 +1,14 @@
-import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild, Output } from '@angular/core';
+import { Component, OnInit, Renderer, ElementRef, ViewChild, Inject, Output } from '@angular/core';
+import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
+import { DOCUMENT } from '@angular/platform-browser';
+
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
-import { DOCUMENT } from '@angular/platform-browser';
-import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { EasingLogic } from 'ngx-page-scroll-core';
+// import { PageScrollService } from 'ngx-page-scroll-core';
 
 @Component({
     selector: 'app-root',
@@ -13,6 +17,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
+
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
     constructor( @Inject(DOCUMENT) private document: any,
@@ -48,6 +53,7 @@ export class AppComponent implements OnInit {
                     navbar.classList.add('navbar-transparent');
                     navbarLogo.classList.remove('app-navbar-fade-in');
                     // navbarLogo.classList.add('app-navbar-fade-out');
+
                 }
             });
         });
