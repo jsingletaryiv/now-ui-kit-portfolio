@@ -25,7 +25,7 @@ import { OverviewComponent } from './overview/overview.component';
         JwBootstrapSwitchNg2Module,
         ComponentsModule,
         AgmCoreModule.forRoot({
-            apiKey: 'YOUR_KEY_HERE'
+            apiKey: 'ADD_KEY_HERE'
         })
     ],
     declarations: [

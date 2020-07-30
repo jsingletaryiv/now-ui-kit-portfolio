@@ -1,0 +1,30 @@
+.fab-container {
+    display: block; /* TODO: Set `display: none;` by default */
+    position: fixed;
+    /* Position FAB near the bottom-right of the browser */
+    bottom: 2rem; 
+    right: 2rem;
+    /* Make sure it floats above all other elements */
+    z-index: 999;
+    // border: none;
+    // outline: none;
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    // cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    // border-radius: 10px; /* Rounded corners */
+    font-size: 1rem; /* Increase font size */
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.fab-icon-holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%
+}
+
+
+
+.back-to-top-btn {
+    display: block;
+}

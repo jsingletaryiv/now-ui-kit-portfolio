@@ -9,13 +9,14 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ComponentsModule } from './components/components.module';
-
 import { IconsModule } from './shared/icons/icons.module';
+
+import { ComponentsModule } from './components/components.module';
+import { ExamplesModule } from './examples/examples.module';
+
+import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
-import { ExamplesModule } from './examples/examples.module';
 
 @NgModule({
     declarations: [

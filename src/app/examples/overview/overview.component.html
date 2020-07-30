@@ -23,7 +23,7 @@
                     
                     <div class="row app-icon-group">
                         <!-- TODO: Finish the group arrow animation -->
-                        <div class="col-md-12 app-icon-blink app-icon-motion">
+                        <div class="col-md-12 app-icon-blink">
                             <fa-icon [icon]="['fas', 'angle-down']" size="lg"></fa-icon>
                         </div>
                         <!-- <div class="col-md-12 app-icon-blink app-icon-motion">
@@ -835,6 +835,57 @@
             <!-- <button id="backToTop" class="btn btn-accent btn-icon btn-round btn-lg" *ngIf="backToTopBtn" (click)="backToTop()" title="Back to Top">
                 <fa-icon [icon]="['fas', 'angle-double-up']" transform="grow-8"></fa-icon>
             </button> -->
+
+            <div class="fab-container">
+                <!-- Inject font-awesome layers component -->
+                <div class="fab-icon-holder fab" role="button">
+                    <fa-layers [fixedWidth]="true">
+                        <fa-icon [icon]="['fas', 'circle']" [classes]="['fab']" transform="grow-20"></fa-icon>
+                        <fa-icon [inverse]="true" [icon]="['fas', 'angle-double-up']" [classes]="['app-icon-blink']" transform="grow-2"></fa-icon>
+                    </fa-layers>
+                </div>
+
+                <ul class="fab-options">
+                    <li>
+                        <div class="fab-icon-holder" role="button">
+                            <span class="fab-label">FAB 1</span>
+                            <fa-layers [fixedWidth]="true">
+                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                <fa-icon [inverse]="true" [icon]="['fas', 'plus']" transform="grow-2"></fa-icon>
+                            </fa-layers>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fab-icon-holder" role="button">
+                            <span class="fab-label">FAB 1</span>
+                            <fa-layers [fixedWidth]="true">
+                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                <fa-icon [inverse]="true" [icon]="['fas', 'plus']" transform="grow-2"></fa-icon>
+                            </fa-layers>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fab-icon-holder" role="button">
+                            <span class="fab-label">FAB 1</span>
+                            <fa-layers [fixedWidth]="true">
+                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                <fa-icon [inverse]="true" [icon]="['fas', 'plus']" transform="grow-2"></fa-icon>
+                            </fa-layers>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fab-icon-holder" role="button">
+                            <span class="fab-label">FAB 1</span>
+                            <fa-layers [fixedWidth]="true">
+                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                <fa-icon [inverse]="true" [icon]="['fas', 'plus']" transform="grow-2"></fa-icon>
+                            </fa-layers>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
         

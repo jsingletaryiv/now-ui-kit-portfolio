@@ -1,5 +1,5 @@
 // Import Variables for Overrides
-@import "now-ui-kit/variables";
+@import "./now-ui-kit/variables";
 
 // Disable / Enable Bootstrap Options
 // ## Options are located in Bootstrap `_variables`partial ## //
@@ -750,7 +750,7 @@ footer {
 // Blinking Icon Set
 // TODO: Needs to be completed
 .app-icon-blink {
-    position: relative;
+    // position: relative;
     
     fa-icon {
         position: relative;
@@ -763,7 +763,8 @@ footer {
         opacity: 1;
     }
 
-    &.app-iconmotion {
+    // Sequential
+    &.app-icon-motion {
         fa-icon:nth-child(1) {
             position: relative;
             -webkit-animation-name: blink;

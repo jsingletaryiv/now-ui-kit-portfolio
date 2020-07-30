@@ -64,12 +64,14 @@ section.section-about .flip-card-front, section.section-about .flip-card-back, .
 }
 
 section.section-about .flip-card-front, .section.section-about .flip-card-front {
+  height: inherit;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
 }
 
 section.section-about .flip-card-back, .section.section-about .flip-card-back {
   background-color: rgba(0, 0, 0, 0);
+  border-right: 1px solid #f8f9fa;
   color: #f8f9fa;
   margin-top: .1rem;
   -webkit-transform: rotateY(180deg);
@@ -79,6 +81,7 @@ section.section-about .flip-card-back, .section.section-about .flip-card-back {
 section.section-about .flip-card-back .img-container, .section.section-about .flip-card-back .img-container {
   width: 5rem;
   height: 5rem;
+  border: 1px solid #f8f9fa;
 }
 
 section.section-about .flip-card-back .img-container img, .section.section-about .flip-card-back .img-container img {
