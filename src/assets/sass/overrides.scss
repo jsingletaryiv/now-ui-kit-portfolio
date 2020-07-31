@@ -1,5 +1,5 @@
 // Import Variables for Overrides
-@import "now-ui-kit/variables";
+@import "./now-ui-kit/variables";
 
 // Disable / Enable Bootstrap Options
 // ## Options are located in Bootstrap `_variables`partial ## //
@@ -763,7 +763,8 @@ footer {
         opacity: 1;
     }
 
-    &.app-iconmotion {
+    // Sequential Arrows
+    &.app-icon-motion {
         fa-icon:nth-child(1) {
             position: relative;
             -webkit-animation-name: blink;
@@ -804,6 +805,18 @@ footer {
         }
 
     }
+}
+
+fa-icon.app-icon-blink-inverse {
+    position: relative;
+
+    -webkit-animation-name: blink;
+        animation-name: blink;
+    -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    opacity: 1;
 }
 
 // ## Fade-In --

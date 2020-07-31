@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer, OnDestroy } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
+
 // TODO: Update `rellax` package after all updates have been made //
 import * as Rellax from 'rellax';
 
@@ -37,7 +38,7 @@ export class OverviewComponent implements OnInit, OnDestroy {
 
     // Landing Page
     landingPageTitle = 'James Singletary IV';
-    landingPageSubTitle = '"Full-Stack" Application / UI Developer';
+    landingPageSubTitle = 'Application / Software / UI Developer';
     // pageSubTitle = 'Since MCMXCVIII';
 
     // TODO: Add section titles as needed //
@@ -54,7 +55,7 @@ export class OverviewComponent implements OnInit, OnDestroy {
     missionTitle = 'Mission Statement //';
     missionText = '';
 
-    constructor( private renderer: Renderer, config: NgbAccordionConfig) {
+    constructor( private renderer: Renderer, config: NgbAccordionConfig, ) {
         config.closeOthers = true;
         config.type = 'info';
     }

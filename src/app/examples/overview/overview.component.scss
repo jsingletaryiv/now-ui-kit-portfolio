@@ -1,8 +1,10 @@
+// Import Variables for Overrides
+@import "../../../assets/sass/overrides";
+
 // Overview Styles
 ngb-progressbar {
     margin-top: 5rem;
 }
-
 
 // ## Variable Overrides ## //
 $text-dark-grey: rgb(53, 53, 53);
@@ -84,6 +86,7 @@ section, .section {
 
         /* Style the front side (fallback if image is missing) */
         .flip-card-front {
+            height: inherit;
             background-color: rgba(0,0,0,0.2);
             color: $text-light;
         }
@@ -91,7 +94,7 @@ section, .section {
         /* Style the back side */
         .flip-card-back {
             background-color: rgba(0,0,0,0);
-            border: 1px solid rgb(248, 249, 250);
+            border-right: 1px solid rgb(248, 249, 250);
             color: rgb(248, 249, 250);
             margin-top: .1rem;
             transform: rotateY(180deg);
@@ -307,25 +310,90 @@ section, .section {
     }
 }
 
-#backToTop {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 2rem; /* Place the button at the bottom of the page */
-    right: 2rem; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    // border: none; /* Remove borders */
-    // outline: none; /* Remove outline */
-    // background-color: red; /* Set a background color */
-    color: white; /* Text color */
-    // cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    // border-radius: 10px; /* Rounded corners */
-    font-size: 1rem; /* Increase font size */
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+.fab-container {
+    display: block; /* TODO: Set `display: none;` by default */
+    position: fixed;
+    /* Position FAB near the bottom-right of the browser */
+    bottom: 50px; 
+    right: 65px;
+    /* Make sure it floats above all other elements */
+    z-index: 999;
+    cursor: pointer;
 }
 
-.back-to-top-btn {
-    display: block;
+.fab-icon-holder {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    padding: 5px 25px 27px 5px;
+    border-radius: 100%;
+
+    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
+
+    fa-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+        font-style: normal;
+    }
+
+    &:hover, fa-icon:hover {
+
+        // TODO: Drop to 0.8 after FAB is complete
+        opacity: 1;
+    }
+}
+
+.fab-primary {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.4rem; /* Increase font size */
+    color: $accent-color; /* Text color */
+}
+
+.fab-options {
+    list-style-type: none;
+    // margin: 0;
+    position: absolute;
+
+    bottom: 30px;
+    right: -6px;
+    
+    color: $primary-color; /* Text color */
+    opacity: 0;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px;
+
+        .fab-label {
+            padding: 2px 5px;
+            margin-right: 10px;
+            align-self: center;
+            user-select: none;
+            white-space: nowrap;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            background: rgb(31, 31, 31);
+            color: rgb(235, 235, 235);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+        }
+    }
+
+    // Transitions
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
+}
+
+// FAB Interactions
+.fab-primary:hover + .fab-options, .fab-options:hover {
+    opacity: 1;
+    // Init Transition
+    transform: scale(1);
 }
 
 .text-shadow-sm {

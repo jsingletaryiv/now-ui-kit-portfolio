@@ -7,6 +7,7 @@ import { OverviewComponent } from './examples/overview/overview.component';
 
 const routes: Routes = [
     { path: 'app', component: OverviewComponent },
+    // { path: 'app', component: OverviewComponent },
     { path: '', redirectTo: '/app', pathMatch: 'full' },
     { path: '**', component: OverviewComponent }
 ];

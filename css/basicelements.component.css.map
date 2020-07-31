@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/components/basicelements/basicelements.component.scss"
+    ],
+    "names": [],
+    "file": "basicelements.component.css"
+}

@@ -8,9 +8,9 @@ import * as Rellax from 'rellax';
     selector: 'app-components',
     templateUrl: './components.component.html',
     styles: [`
-    ngb-progressbar {
-        margin-top: 5rem;
-    }
+        ngb-progressbar {
+            margin-top: 5rem;
+        }
     `]
 })
 
@@ -20,9 +20,9 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     page = 4;
     page1 = 5;
     page2 = 3;
-    focus;
-    focus1;
-    focus2;
+    // focus;
+    // focus1;
+    // focus2;
 
     date: {year: number, month: number};
     model: NgbDateStruct;
@@ -54,6 +54,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
         const body = document.getElementsByTagName('body')[0];
         body.classList.add('overview-page');
     }
+    
     ngOnDestroy() {
         const navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.remove('navbar-transparent');
