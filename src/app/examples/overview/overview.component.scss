@@ -314,45 +314,86 @@ section, .section {
     display: block; /* TODO: Set `display: none;` by default */
     position: fixed;
     /* Position FAB near the bottom-right of the browser */
-    bottom: 60px; 
-    right: 60px;
+    bottom: 50px; 
+    right: 65px;
     /* Make sure it floats above all other elements */
     z-index: 999;
     cursor: pointer;
 }
 
 .fab-icon-holder {
-    width: 60px;
-    height: 60px;
-    padding: 5px 5px 5px 5px;
-    color: $accent-color; /* Text color */
-    border-radius: 100%;
-    font-size: 1rem; /* Increase font size */
-    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+    width: 1.5rem;
+    height: 1.5rem;
 
-    &:hover {
-        opacity: 0.8;
+    padding: 5px 25px 27px 5px;
+    border-radius: 100%;
+
+    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
+
+    fa-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+        font-style: normal;
+    }
+
+    &:hover, fa-icon:hover {
+
+        // TODO: Drop to 0.8 after FAB is complete
+        opacity: 1;
     }
 }
 
-.fab {
-    width: 75px;
-    height: 75px;
+.fab-primary {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.4rem; /* Increase font size */
+    color: $accent-color; /* Text color */
 }
 
 .fab-options {
     list-style-type: none;
-    margin: 0;
-
+    // margin: 0;
     position: absolute;
-    bottom: 70px;
-    right: 0;
 
+    bottom: 30px;
+    right: -6px;
+    
+    color: $primary-color; /* Text color */
     opacity: 0;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px;
+
+        .fab-label {
+            padding: 2px 5px;
+            margin-right: 10px;
+            align-self: center;
+            user-select: none;
+            white-space: nowrap;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            background: rgb(31, 31, 31);
+            color: rgb(235, 235, 235);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+        }
+    }
+
+    // Transitions
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
 }
 
-.back-to-top-btn {
-    display: block;
+// FAB Interactions
+.fab-primary:hover + .fab-options, .fab-options:hover {
+    opacity: 1;
+    // Init Transition
+    transform: scale(1);
 }
 
 .text-shadow-sm {

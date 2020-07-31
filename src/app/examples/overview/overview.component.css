@@ -23,6 +23,7 @@ section.section-about, .section.section-about {
   /* Position the front and back side */
   /* Style the front side (fallback if image is missing) */
   /* Style the back side */
+  display: inherit;
 }
 
 section.section-about .flip-card, .section.section-about .flip-card {
