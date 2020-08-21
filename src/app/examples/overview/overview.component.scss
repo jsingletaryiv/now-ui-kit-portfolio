@@ -155,7 +155,7 @@ section, .section {
             }
         }
 
-        // ## Skill Bars ## //
+        // ## Skill Bar Chart ## //
 
         $skills01: 90%;
         $skills02: 85%;
@@ -310,25 +310,31 @@ section, .section {
     }
 }
 
+// ## FAB - Floating Action Buttons ## //
 .fab-container {
-    display: block; /* TODO: Set `display: none;` by default */
+    // TODO: Set `display: none;` by default
+    display: block;
     position: fixed;
-    /* Position FAB near the bottom-right of the browser */
-    bottom: 50px; 
-    right: 65px;
-    /* Make sure it floats above all other elements */
+    // Position FAB just outside the browser window
+    // bottom: -90px;
+    bottom: 30px; 
+    right: 60px;
+    // Make sure it floats above all other elements
     z-index: 999;
     cursor: pointer;
 }
 
+.fab-container-slide-in {
+    // Slide FAB in from the bottom of browser
+    transition: bottom 0.5s ease-in;
+    bottom: 30px; 
+    right: 60px;
+}
+
 .fab-icon-holder {
-    width: 1.5rem;
-    height: 1.5rem;
-
-    padding: 5px 25px 27px 5px;
+    padding: 5px 15px 20px 5px;
     border-radius: 100%;
-
-    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
 
     fa-icon {
         display: flex;
@@ -341,25 +347,22 @@ section, .section {
 
     &:hover, fa-icon:hover {
 
-        // TODO: Drop to 0.8 after FAB is complete
-        opacity: 1;
+        // // TODO: Drop to 0.8 after FAB is complete
+        opacity: .8;
     }
 }
 
 .fab-primary {
-    width: 1.8rem;
-    height: 1.8rem;
-    font-size: 1.4rem; /* Increase font size */
+    font-size: 2rem; /* Increase font size */
     color: $accent-color; /* Text color */
 }
 
 .fab-options {
     list-style-type: none;
-    // margin: 0;
     position: absolute;
 
-    bottom: 30px;
-    right: -6px;
+    bottom: 65px;
+    right: 8px;
     
     color: $primary-color; /* Text color */
     opacity: 0;
@@ -367,39 +370,40 @@ section, .section {
     li {
         display: flex;
         justify-content: space-between;
-        padding: 4px;
+        padding: 5px 0;
+        font-size: 1.3rem;
 
         .fab-label {
             padding: 2px 5px;
-            margin-right: 10px;
+            margin: 0 15px 10px 0;
             align-self: center;
             user-select: none;
             white-space: nowrap;
             border-radius: 3px;
-            font-size: 0.7rem;
-            background: rgb(31, 31, 31);
+            font-size: 1rem;
+            background: rgba(31, 31, 31, 0.6);
             color: rgb(235, 235, 235);
             box-shadow: 0 6px 30px rgba(0,0,0,0.2);
         }
     }
 
-    // Transitions
+    // Animations
     transition: all 0.3s ease;
     transform: scale(0);
-    transform-origin: 85% bottom;
+    transform-origin: 90% bottom;
 }
 
 // FAB Interactions
 .fab-primary:hover + .fab-options, .fab-options:hover {
     opacity: 1;
-    // Init Transition
-    transform: scale(1);
+    // Hover Transition
+    transform: scale(.9);
 }
 
 .text-shadow-sm {
-    text-shadow: 1px 1px 1px #212121
+    text-shadow: 1px 1px 1px #212121;
 }
 
 .text-shadow-lg {
-    text-shadow: 3px 3px 3px #212121
+    text-shadow: 3px 3px 3px #212121;
 }

@@ -44,8 +44,8 @@
 
     <div class="scrollbar scrollbar-primary">
         <div class="main force-overflow">
-            <!-- ## Section : Welcome ## -->
-            <section id="welcome" class="section-welcome section-header section-down-arrow border-top border-2 border-info" data-background-color="white">
+            <!-- ## Section : Ignition ## -->
+            <section id="ignition" class="section-welcome section-header section-down-arrow border-top border-2 border-info" data-background-color="white">
                 <div class="container">
                     <div class="d-flex flex-column">
                         <div class="section-header-icon mx-auto text-primary h2">
@@ -93,7 +93,7 @@
             </section>
     
             <!-- ## Section : Defining "Full-Stack" Development ## -->
-            <section id="define" class="section-definition section-header section-down-arrow" data-background-color="accent">
+            <section id="define" class="section-definition section-header section-down-arrow fab-anchor" data-background-color="accent">
                 <div class="section-header-image" style="background-image: url('assets/img/headers/falcon-rocket.jpg');" filter-gradient="accent"></div>
                 <div class="container">
                     <div class="d-md-flex flex-md-column">
@@ -836,7 +836,7 @@
                 <fa-icon [icon]="['fas', 'angle-double-up']" transform="grow-8"></fa-icon>
             </button> -->
 
-            <div class="fab-container">
+            <div class="fab-container" data-aos="fade-left" data-aos-anchor="fab-anchor">
                 <!-- Inject font-awesome layers component -->
                 <div class="fab-icon-holder fab-primary" role="button">
                     <fa-layers [fixedWidth]="true">
@@ -847,42 +847,49 @@
 
                 <ul class="fab-options">
                     <li>
-                        <span class="fab-label">R&eacute;sum&eacute;s</span>
-                        <div class="fab-icon-holder" role="button">
-                            <fa-layers [fixedWidth]="true">
-                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
-                                <fa-icon [inverse]="true" [icon]="['fas', 'file-download']" transform="grow-2"></fa-icon>
-                            </fa-layers>
-                    
-                        </div>
-                    
+                        <span class="fab-label">Infographic</span>
+                        <a href="assets/resume/jsingletary-material-resume-2020.pdf" target="_blank">
+                          <div class="fab-icon-holder" role="button">
+                              <fa-layers [fixedWidth]="true">
+                                  <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                  <fa-icon [inverse]="true" [icon]="['fas', 'file-download']" transform="grow-2"></fa-icon>
+                              </fa-layers>
+                          </div>
+                        </a>
                     </li>
                     <li>
-                        <span class="fab-label">Experience</span>
-                        <div class="fab-icon-holder" role="button">
-                            <fa-layers [fixedWidth]="true">
-                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
-                                <fa-icon [inverse]="true" [icon]="['fas', 'award']" transform="grow-2"></fa-icon>
-                            </fa-layers>
-                        </div>
+                        <span class="fab-label">Focus</span>
+                        <a pageScroll href="#overview-focus">
+                          <div class="fab-icon-holder" role="button">
+                              <fa-layers [fixedWidth]="true">
+                                  <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                  <fa-icon [inverse]="true" [icon]="['fas', 'award']" transform="grow-2"></fa-icon>
+                              </fa-layers>
+                          </div>
+                        </a>
                     </li>
                     <li>
                         <span class="fab-label">Projects</span>
-                        <div class="fab-icon-holder" role="button">
-                            <fa-layers [fixedWidth]="true">
-                                <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
-                                <fa-icon [inverse]="true" [icon]="['fas', 'code']" transform="grow-2"></fa-icon>
-                            </fa-layers>
-                        </div>
+                        <a pageScroll href="#projects">
+                          <div class="fab-icon-holder" role="button">
+                              <fa-layers [fixedWidth]="true">
+                                  <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
+                                  <fa-icon [inverse]="true" [icon]="['fas', 'code']" transform="grow-2"></fa-icon>
+                              </fa-layers>
+                          </div>
+                        </a>
                     </li>
                     <li>
                         <span class="fab-label">Beam Me Up</span>
-                        <div class="fab-icon-holder" role="button">
+                        <a routerLink="/app" pageScroll [pageScrollTarget]="'.wrapper'">
+                          <div class="fab-icon-holder" role="button">
                             <fa-layers [fixedWidth]="true">
                                 <fa-icon [icon]="['fas', 'circle']" transform="grow-20"></fa-icon>
                                 <fa-icon [inverse]="true" [icon]="['fas', 'angle-double-up']" transform="grow-2"></fa-icon>
                             </fa-layers>
-                        </div>
+                          </div>
+                        
+                        </a>
 
                     </li>
 

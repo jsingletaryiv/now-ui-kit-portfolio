@@ -16,12 +16,14 @@ import { ExamplesModule } from './examples/examples.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { OverviewComponent } from './examples/overview/overview.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        OverviewComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -37,8 +39,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         NgxPageScrollModule,
         RouterModule,
         AppRoutingModule,
-        ComponentsModule,
-        ExamplesModule
+        ComponentsModule
+        // ExamplesModule
     ],
     providers: [],
     bootstrap: [AppComponent]
