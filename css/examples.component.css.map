@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../src/app/examples/examples.component.scss"
-    ],
-    "names": [],
-    "file": "examples.component.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AACI,OADG,CACH,aAAa,AAAC,CAKV,WAAW,CAAE,OAAO,CACpB,SAAS,CAAE,KAAK,CAGhB,OAAO,CAAE,MAAM,CACf,WAAW,CAAE,MAAM,CACtB,AAZL,AAgBY,OAhBL,CAcH,cAAc,CAAC,cAAc,CACzB,eAAe,AACV,aAAa,AAAC,CACX,KAAK,CAAE,SAAS,CACnB,AAlBb,AAmBY,OAnBL,CAcH,cAAc,CAAC,cAAc,CACzB,eAAe,AAIV,cAAc,AAAC,CACZ,KAAK,CAAE,MAAM,CAChB,AArBb,AAsBY,OAtBL,CAcH,cAAc,CAAC,cAAc,CACzB,eAAe,AAOV,WAAW,AAAC,CACT,KAAK,CAAE,OAAO,CACjB",
-    "sources": [
-        "../src/app/shared/navbar/navbar.component.scss"
-    ],
-    "names": [],
-    "file": "navbar.component.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../src/app/components/navigation/navigation.component.scss"
-    ],
-    "names": [],
-    "file": "navigation.component.css"
-}
