@@ -622,6 +622,13 @@ section, .section {
     animation-name: fadeIn;
 }
 
+.dropdown-header:not([href]):not([tabindex]){
+    color: $accent-color-opacity;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}
+
 // ## Icons & Buttons ## //
 // TODO: Ad-Hoc - Find Better Solution
 .card-footer .svg-inline--fa.fa-lg {

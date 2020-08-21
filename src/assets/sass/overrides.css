@@ -519,6 +519,13 @@ section[data-background-color="black"], .section[data-background-color="black"] 
   animation-name: fadeIn;
 }
 
+.dropdown-header:not([href]):not([tabindex]) {
+  color: rgba(249, 99, 50, 0.3);
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .card-footer .svg-inline--fa.fa-lg {
   vertical-align: -0.75em;
 }
@@ -650,7 +657,7 @@ footer .copyright {
   opacity: 1;
 }
 
-.app-icon-blink.app-iconmotion fa-icon:nth-child(1) {
+.app-icon-blink.app-icon-motion fa-icon:nth-child(1) {
   position: relative;
   -webkit-animation-name: blink;
   animation-name: blink;
@@ -663,7 +670,7 @@ footer .copyright {
   opacity: 1;
 }
 
-.app-icon-blink.app-iconmotion fa-icon:nth-child(2) {
+.app-icon-blink.app-icon-motion fa-icon:nth-child(2) {
   position: relative;
   -webkit-animation-name: blink;
   animation-name: blink;
@@ -676,7 +683,7 @@ footer .copyright {
   opacity: 1;
 }
 
-.app-icon-blink.app-iconmotion fa-icon:nth-child(3) {
+.app-icon-blink.app-icon-motion fa-icon:nth-child(3) {
   position: relative;
   -webkit-animation-name: blink;
   animation-name: blink;
@@ -684,6 +691,17 @@ footer .copyright {
   animation-duration: 1000ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+fa-icon.app-icon-blink-inverse {
+  position: relative;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   opacity: 1;
